@@ -138,8 +138,7 @@ static void cocoa_vk_gfx_ctx_get_video_size(void *data,
       unsigned* width, unsigned* height)
 {
     float screenscale               = cocoa_screen_get_native_scale();
-    MTKView *g_view                 = apple_platform.renderView;
-    CGRect size                     = g_view.bounds;
+    CGRect size                     = [apple_platform.renderView bounds];
     *width                          = CGRectGetWidth(size)  * screenscale;
     *height                         = CGRectGetHeight(size) * screenscale;
 }
@@ -294,7 +293,7 @@ static bool cocoa_vk_gfx_ctx_set_video_mode(void *data,
    if (!vulkan_surface_create(&cocoa_ctx->vk,
                               VULKAN_WSI_MVK_IOS,
                               NULL,
-                              (BRIDGE void *)g_view,
+                              (BRIDGE void *)((MetalView*)g_view).layer,
                               cocoa_ctx->width,
                               cocoa_ctx->height,
                               cocoa_ctx->swap_interval))

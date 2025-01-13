@@ -1,19 +1,18 @@
 //
-//  PVRetroArchCore.m
+//  PVRetroArchCoreBridge.m
 //  PVRetroArch
 //
 //  Created by Joseph Mattiello on 4/6/18.
 //  Copyright © 2021 Provenance. All rights reserved.
 //
 
-#import "PVRetroArchCore.h"
-#import "PVRetroArchCore+Controls.h"
-#import "PVRetroArchCore+Audio.h"
-#import "PVRetroArchCore+Video.h"
+#import "PVRetroArchCoreBridge+Controls.h"
+#import "PVRetroArchCoreBridge+Audio.h"
+#import "PVRetroArchCoreBridge+Video.h"
+#import "PVRetroArchCoreBridge+Archive.h"
 #import <PVRetroArch/RetroArch-Swift.h>
 #import <Foundation/Foundation.h>
-#import <PVSupport/PVSupport.h>
-#import <PVSupport/PVEmulatorCore.h>
+#import <PVCoreObjCBridge/PVCoreObjCBridge.h>
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 #import <Metal/Metal.h>
@@ -41,12 +40,20 @@
 #include "../../retroarch.h"
 #include "../../verbosity.h"
 #include "../../paths.h"
+#include "../../audio/audio_driver.h"
 
 #ifdef HAVE_MENU
 #include "../../menu/menu_setting.h"
 #endif
 #import <AVFoundation/AVFoundation.h>
+
 #define IS_IPHONE() ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
+
+static void rarch_draw_observer(CFRunLoopObserverRef observer,
+                                CFRunLoopActivity activity, void *info);
+
+static CFRunLoopObserverRef iterate_observer;
+
 
 apple_frontend_settings_t apple_frontend_settings;
 extern id<ApplePlatform> apple_platform;
@@ -70,12 +77,35 @@ extern bool firstLoad;
 char **argv;
 int argc =  1;
 
-#pragma mark - PVRetroArchCore Begin
+#pragma mark - PVRetroArchCoreBridge Begin
 
-@interface PVRetroArchCore (RetroArchUI)
+@interface PVRetroArchCoreBridge (RetroArchUI)
 @end
 
-@implementation PVRetroArchCore (RetroArchUI)
+@implementation PVRetroArchCoreBridge (RetroArchUI)
+
+- (void)initialize {
+    [super initialize];
+//    [self setupEmulation];
+    NSLog(@"RetroArch: Extract %d\n", self.extractArchive);
+}
+
+- (void)setupEmulation {
+    self.alwaysUseMetal = true;
+    self.skipLayout = true;
+    [self parseOptions];
+    settings_t *settings = config_get_ptr();
+    if (!settings) {
+        retroarch_config_init();
+        config_set_defaults(global_get_ptr());
+        frontend_darwin_get_env(argc, argv, NULL, NULL);
+        dir_check_defaults(NULL);
+    }
+    [self writeConfigFile];
+    [self syncResources:self.BIOSPath
+                     to:[self.batterySavesPath stringByAppendingPathComponent:@"../../RetroArch/system" ]];
+}
+
 - (void)startEmulation {
 	@autoreleasepool {
         _current=self;
@@ -90,20 +120,62 @@ int argc =  1;
 }
 
 - (void)setPauseEmulation:(BOOL)flag {
+    if (!self.isOn) {
+        return;
+    }
     command_event(flag ? CMD_EVENT_PAUSE : CMD_EVENT_UNPAUSE, NULL);
+    runloop_state_t *runloop_st = runloop_state_get_ptr();
+    if (flag) {
+        NSLog(@"RetroArch: Pause\n");
+        runloop_st->flags &= ~RUNLOOP_FLAG_FASTMOTION;
+        runloop_st->flags &= ~RUNLOOP_FLAG_SLOWMOTION;
+        runloop_st->flags |= RUNLOOP_FLAG_PAUSED;
+        runloop_st->flags |= RUNLOOP_FLAG_IDLE;
+    } else {
+        NSLog(@"RetroArch: UnPause\n");
+        runloop_st->flags &= ~RUNLOOP_FLAG_FASTMOTION;
+        runloop_st->flags &= ~RUNLOOP_FLAG_SLOWMOTION;
+        runloop_st->flags &= ~RUNLOOP_FLAG_PAUSED;
+        runloop_st->flags &= ~RUNLOOP_FLAG_IDLE;
+        [self setSpeed];
+    }
     [super setPauseEmulation:flag];
+}
+- (void)setSpeed {
+    settings_t *settings = config_get_ptr();
+    runloop_state_t *runloop_st = runloop_state_get_ptr();
+    apple_direct_input_keyboard_event(false, (int)RETROK_F14, 0, 0, (int)RETRO_DEVICE_KEYBOARD);
+    apple_direct_input_keyboard_event(false, (int)RETROK_F15, 0, 0, (int)RETRO_DEVICE_KEYBOARD);
+    runloop_st->flags &= ~RUNLOOP_FLAG_FASTMOTION;
+    runloop_st->flags &= ~RUNLOOP_FLAG_SLOWMOTION;
+    runloop_st->flags &= ~RUNLOOP_FLAG_PAUSED;
+    runloop_st->flags &= ~RUNLOOP_FLAG_IDLE;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^(void){
+        settings_t *settings = config_get_ptr();
+        float sm = self.smSpeed / 100.0;
+        float ff = self.ffSpeed / 100.0;
+        settings->floats.slowmotion_ratio  = sm;
+        settings->floats.fastforward_ratio = ff;
+        if (self.gameSpeed > 1) {
+            NSLog(@"RetroArch:fast forward %f", ff);
+            apple_direct_input_keyboard_event(true, (int)RETROK_F15, 0, 0, (int)RETRO_DEVICE_KEYBOARD);
+        } else if (self.gameSpeed < 1) {
+            NSLog(@"RetroArch:slow motion %f", sm);
+            apple_direct_input_keyboard_event(true, (int)RETROK_F14, 0, 0, (int)RETRO_DEVICE_KEYBOARD);
+        }
+    });
 }
 
 - (void)stopEmulation {
 	[super stopEmulation];
-	self->shouldStop = YES;
+	self.shouldStop = YES;
 	if (iterate_observer) {
 		CFRunLoopObserverInvalidate(iterate_observer);
 		CFRelease(iterate_observer);
 	}
 	iterate_observer = NULL;
     retroarch_config_init();
-	task_queue_init(true, main_msg_queue_push);
+	task_queue_init(true, (void (*)(struct retro_task *, const char *, unsigned int, unsigned int, bool)) main_msg_queue_push);
 	main_exit(NULL);
     task_queue_deinit();
 	_isInitialized = false;
@@ -119,7 +191,6 @@ int argc =  1;
 }
 - (void)setOptionValues {
 	g_gs_preference = self.gsPreference;
-
 }
 
 void extract_bundles();
@@ -127,14 +198,15 @@ void extract_bundles();
 	NSFileManager *fm = [[NSFileManager alloc] init];
 	NSString *fileName = [NSString stringWithFormat:@"%@/../../RetroArch/config/retroarch.cfg",
 						  self.batterySavesPath];
-    NSString *verFile = [NSString stringWithFormat:@"%@/../../RetroArch/config/1.1.1.cfg",
+    // TODO: Get the version # from core.plist
+    NSString *verFile = [NSString stringWithFormat:@"%@/../../RetroArch/config/1.27.1.cfg",
                          self.batterySavesPath];
 	if (![fm fileExistsAtPath: fileName] || ![fm fileExistsAtPath: verFile] || [self shouldUpdateAssets]) {
-        NSString *src = [[NSBundle bundleForClass:[PVRetroArchCore class]] pathForResource:@"retroarch.cfg" ofType:nil];
+        NSString *src = [[NSBundle bundleForClass:[PVRetroArchCoreBridge class]] pathForResource:@"retroarch.cfg" ofType:nil];
         [self syncResource:src to:fileName];
         [self syncResource:src to:verFile];
         
-        NSString *overlay_back = [[NSBundle bundleForClass:[PVRetroArchCore class]] pathForResource:@"arrow.png" ofType:nil];
+        NSString *overlay_back = [[NSBundle bundleForClass:[PVRetroArchCoreBridge class]] pathForResource:@"arrow.png" ofType:nil];
         [self syncResource:overlay_back to:[NSString stringWithFormat:@"%@/../../RetroArch/assets/xmb/flatui/png/arrow.png", self.batterySavesPath]];
         [self syncResource:overlay_back to:[NSString stringWithFormat:@"%@/../../RetroArch/assets/xmb/monochrome/png/arrow.png", self.batterySavesPath]];
         [self syncResource:overlay_back to:[NSString stringWithFormat:@"%@/../../RetroArch/assets/xmb/automatic/png/arrow.png", self.batterySavesPath]];
@@ -155,13 +227,18 @@ void extract_bundles();
         content=@"video_driver = \"gl\"\n";
     else if (self.gsPreference == 2)
         content=@"video_driver = \"vulkan\"\n";
-    [self syncResources:[[NSBundle bundleForClass:[PVRetroArchCore class]] pathForResource:@"pv_ui_overlay" ofType:nil]
+    [self syncResources:[[NSBundle bundleForClass:[PVRetroArchCoreBridge class]] pathForResource:@"pv_ui_overlay" ofType:nil]
                      to:[self.batterySavesPath stringByAppendingPathComponent:@"../../RetroArch/overlays/pv_ui_overlay" ]];
-    [self syncResource:[[NSBundle bundleForClass:[PVRetroArchCore class]] pathForResource:@"pv_ui_overlay/pv_ui.cfg" ofType:nil]
+    [self syncResource:[[NSBundle bundleForClass:[PVRetroArchCoreBridge class]] pathForResource:@"pv_ui_overlay/pv_ui.cfg" ofType:nil]
                      to:[self.batterySavesPath stringByAppendingPathComponent:@"../../RetroArch/overlays/pv_ui_overlay/pv_ui.cfg" ]];
+    [self syncResources:[[NSBundle bundleForClass:[PVRetroArchCoreBridge class]] pathForResource:@"mame_plugins" ofType:nil]
+                     to:[self.batterySavesPath stringByAppendingPathComponent:@"../../RetroArch/system/mame/plugins" ]];
+    [self syncResource:[[NSBundle bundleForClass:[PVRetroArchCoreBridge class]] pathForResource:@"hatari.cfg" ofType:nil]
+                     to:[self.batterySavesPath stringByAppendingPathComponent:@"../../RetroArch/system/hatari.cfg" ]];
+
     if (!self.retroArchControls) {
         content = [content stringByAppendingString:
-                       @"input_overlay = \"~/Documents/RetroArch/overlays/pv_ui_overlay/pv_ui.cfg\"\n"
+                       @"input_overlay_enable = \"false\"\n"
         ];
     }
     if (self.coreOptionConfigPath.length > 0 && self.coreOptionConfig.length > 0) {
@@ -176,6 +253,8 @@ void extract_bundles();
     } else if (self.coreOptionConfig.length > 0) {
         content=[content stringByAppendingString:self.coreOptionConfig];
     }
+    content = [content stringByAppendingString:
+               [NSString stringWithFormat:@"cache_directory = \"%@\"\n", self.batterySavesPath]];
     fileName = [NSString stringWithFormat:@"%@/../../RetroArch/config/opt.cfg", self.batterySavesPath];
     [content writeToFile:fileName
               atomically:NO
@@ -183,6 +262,9 @@ void extract_bundles();
                    error:nil];
 }
 - (bool)shouldUpdateAssets {
+#if DEBUG
+    return true;
+#else
     // If assets were updated, refresh config
     NSFileManager *fm = [[NSFileManager alloc] init];
     NSString *file=[NSString stringWithFormat:@"%@/../../RetroArch/assets/xmb/flatui/png/arrow.png", self.batterySavesPath];
@@ -193,23 +275,17 @@ void extract_bundles();
         }
     }
     return true;
+#endif
 }
 #pragma mark - Running
-- (void)setupEmulation {
-    self.alwaysUseMetal = true;
-    self.skipLayout = true;
+
+- (void)setVolume {
     [self parseOptions];
-	settings_t *settings = config_get_ptr();
-	if (!settings) {
-        retroarch_config_init();
-		config_set_defaults(global_get_ptr());
-		frontend_darwin_get_env(argc, argv, NULL, NULL);
-		dir_check_defaults(NULL);
-	}
-    [self writeConfigFile];
-    [self syncResources:self.BIOSPath
-                     to:[self.batterySavesPath stringByAppendingPathComponent:@"../../RetroArch/system" ]];
+    settings_t *settings = config_get_ptr();
+    settings->floats.audio_mixer_volume = 92.0 * self.volume/92.0 - 80;
+    command_event_set_mixer_volume(settings, 0);
 }
+
 - (void)syncResources:(NSString*)from to:(NSString*)to {
 	if (!from)
 		return;
@@ -229,6 +305,7 @@ void extract_bundles();
 		}
 	}
 }
+
 - (void)syncResource:(NSString*)from to:(NSString*)to {
     if (!from)
         return;
@@ -238,6 +315,7 @@ void extract_bundles();
     NSData *fileData = [NSData dataWithContentsOfFile:from];
     [fileData writeToFile:to atomically:NO];
 }
+
 - (void)setViewType:(apple_view_type_t)vt
 {
     if (vt == _vt)
@@ -252,15 +330,18 @@ void extract_bundles();
     
     switch (vt)
     {
+#ifdef HAVE_COCOA_METAL
         case APPLE_VIEW_TYPE_VULKAN: {
             self.gsPreference = 2;
             MetalView *v = [MetalView new];
             v.paused                = YES;
             v.enableSetNeedsDisplay = NO;
+#if TARGET_OS_IOS
             v.multipleTouchEnabled  = YES;
-            v.autoresizesSubviews=true;
-            v.autoResizeDrawable=true;
-            v.contentMode=UIViewContentModeScaleToFill;
+#endif
+//            v.autoresizesSubviews=true;
+//            v.autoResizeDrawable=true;
+//            v.contentMode=UIViewContentModeScaleToFill;
             _renderView = v;
         }
             break;
@@ -269,7 +350,7 @@ void extract_bundles();
             MetalView *v = [MetalView new];
             v.paused                = YES;
             v.enableSetNeedsDisplay = NO;
-#if TARGET_OS_IOS
+#if TARGET_OS_IOS && !TARGET_OS_TV && !TARGET_OS_WATCH && !TARGET_OS_OSX
             v.multipleTouchEnabled  = YES;
 #endif
             if (!self.isRootView) {
@@ -282,6 +363,7 @@ void extract_bundles();
             _renderView = v;
         }
             break;
+#endif
         case APPLE_VIEW_TYPE_OPENGL_ES:
             self.gsPreference = 1;
             glkitview_init();
@@ -295,10 +377,10 @@ void extract_bundles();
     _renderView.translatesAutoresizingMaskIntoConstraints = NO;
     UIView *rootView = [CocoaView get].view;
     [rootView addSubview:_renderView];
-    [[_renderView.topAnchor constraintEqualToAnchor:rootView.topAnchor] setActive:YES];
-    [[_renderView.bottomAnchor constraintEqualToAnchor:rootView.bottomAnchor] setActive:YES];
-    [[_renderView.leadingAnchor constraintEqualToAnchor:rootView.leadingAnchor] setActive:YES];
-    [[_renderView.trailingAnchor constraintEqualToAnchor:rootView.trailingAnchor] setActive:YES];
+    [[_renderView.safeAreaLayoutGuide.topAnchor constraintEqualToAnchor:rootView.safeAreaLayoutGuide.topAnchor] setActive:YES];
+    [[_renderView.safeAreaLayoutGuide.bottomAnchor constraintEqualToAnchor:rootView.safeAreaLayoutGuide.bottomAnchor] setActive:YES];
+    [[_renderView.safeAreaLayoutGuide.leadingAnchor constraintEqualToAnchor:rootView.safeAreaLayoutGuide.leadingAnchor] setActive:YES];
+    [[_renderView.safeAreaLayoutGuide.trailingAnchor constraintEqualToAnchor:rootView.safeAreaLayoutGuide.trailingAnchor] setActive:YES];
 }
 
 - (void)setupView {
@@ -329,29 +411,56 @@ void extract_bundles();
 		argv=param;
 		NSLog(@"Loading %s\n", param[0]);
 	} else {
-		NSString *sysPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"modules/%@", [self coreIdentifier]] ofType:nil];
-		if ([fm fileExistsAtPath: sysPath]) {
-			NSLog(@"Found Module %s\n", sysPath.UTF8String);
-		}
+        NSBundle *mainBundle = [NSBundle mainBundle];
+        NSString *mainBundlePath = mainBundle.bundlePath;
+        
+        NSString *coreIdentifier = [self coreIdentifier];
+        NSString *coreBinary = [coreIdentifier stringByDeletingPathExtension];
+        NSString *resourceName = [NSString stringWithFormat:@"%@", coreIdentifier];
+        NSString *resourcePath = [NSString stringWithFormat:@"Frameworks/%@", resourceName];
+        NSString *sysPath = [NSString stringWithFormat:@"%@/%@", mainBundlePath, resourcePath];
+
+        /// Check if the module is found at the expected path
+        if ([fm fileExistsAtPath: sysPath]) {
+            ILOG(@"Found Module %@\n", sysPath);
+        } else {
+            ELOG(@"Error: No module found at %@\n", sysPath);
+        }
+    
+        /// Check if the ROM is found at the expected path
 		if ([fm fileExistsAtPath: romPath]) {
+            romPath=[self checkROM:romPath];
 			NSLog(@"Found Game %s\n", romPath.UTF8String);
-		}
+        } else {
+            ELOG(@"No game found at path: %@", romPath);
+        }
+
 		// Core Identifier is the dylib file name
-		char *param[] = { "retroarch", "-L", [self coreIdentifier].UTF8String, [romPath UTF8String], "--appendconfig", optConfig.UTF8String, "--verbose", NULL };
+        char *param[] = { "retroarch",
+            "-L", sysPath.stringByStandardizingPath.UTF8String, romPath.stringByStandardizingPath.UTF8String,
+            "--appendconfig", optConfig.UTF8String,
+            "--verbose", NULL };
 		argc=7;
 		argv=param;
 		NSLog(@"Loading %s %s\n", param[2], param[3]);
 	}
-	NSError *error;
-	[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryAmbient error:&error];
+    if (processing_init) {
+        [self extractArchive:[[NSBundle bundleForClass:[PVRetroArchCoreBridge class]] pathForResource:@"assets.zip" ofType:nil] toDestination:[self.batterySavesPath stringByAppendingPathComponent:@"../../RetroArch"] overwrite:true];
+        processing_init=false;
+    }
+//	NSError *error;
+//    [[AVAudioSession sharedInstance]
+//     setCategory:AVAudioSessionCategoryAmbient
+//     mode:AVAudioSessionModeDefault
+//     options:AVAudioSessionCategoryOptionAllowBluetooth |
+//     AVAudioSessionCategoryOptionAllowAirPlay |
+//     AVAudioSessionCategoryOptionAllowBluetoothA2DP |
+//     AVAudioSessionCategoryOptionMixWithOthers
+//     error:&error];
 	[self refreshSystemConfig];
 	[self showGameView];
 	rarch_main(argc, argv, NULL);
 	_isInitialized=true;
-	if (processing_init) {
-		extract_bundles();
-		processing_init=false;
-	}
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^(void){
         runloop_state_t *runloop_st = runloop_state_get_ptr();
         runloop_st->flags &= ~RUNLOOP_FLAG_OVERRIDES_ACTIVE;
@@ -359,6 +468,17 @@ void extract_bundles();
 	iterate_observer = CFRunLoopObserverCreate(0, kCFRunLoopBeforeWaiting, true, 0, rarch_draw_observer, 0);
 	CFRunLoopAddObserver(CFRunLoopGetMain(), iterate_observer, kCFRunLoopCommonModes);
 	apple_gamecontroller_joypad_init(NULL);
+    [self setupJoypad];
+}
+- (void)setupJoypad {
+    NSLog(@"Analog Dpad %d", self.bindAnalogDpad);
+    if (self.bindAnalogDpad) {
+        settings_t *settings = config_get_ptr();
+        settings->uints.input_analog_dpad_mode[0]=ANALOG_DPAD_LSTICK_FORCED;
+    } else {
+        settings_t *settings = config_get_ptr();
+        settings->uints.input_analog_dpad_mode[0]=ANALOG_DPAD_NONE;
+    }
 }
 
 - (void)setupWindow {
@@ -414,7 +534,9 @@ void extract_bundles();
             self.touchViewController.view.userInteractionEnabled=true;
             self.touchViewController.view.autoresizesSubviews=true;
             self.touchViewController.view.userInteractionEnabled=true;
+#if !TARGET_OS_TV
             self.touchViewController.view.multipleTouchEnabled=true;
+#endif
         } else {
             [gl_view_controller.view addSubview:self.view];
             [gl_view_controller addChildViewController:rootController];
@@ -432,10 +554,14 @@ void extract_bundles();
             gl_view_controller.view.userInteractionEnabled=true;
             gl_view_controller.view.autoresizesSubviews=true;
             gl_view_controller.view.userInteractionEnabled=true;
+#if !TARGET_OS_TV
             gl_view_controller.view.multipleTouchEnabled=true;
+#endif
         }
         self.view.userInteractionEnabled=true;
+#if !TARGET_OS_TV
         self.view.multipleTouchEnabled=true;
+#endif
         self.view.autoresizesSubviews=true;
         self.view.contentMode=UIViewContentModeScaleToFill;
 	}
@@ -444,10 +570,12 @@ void extract_bundles();
 	NSLog(@"In Show Game View now\n");
     [self setupWindow];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [self setVolume];
 		command_event(CMD_EVENT_AUDIO_START, NULL);
+        command_event(CMD_EVENT_UNPAUSE, NULL);
+        [self useRetroArchController:self.retroArchControls];
 	});
 }
-
 #pragma mark - ApplePlatform
 -(id)renderView { return _renderView; }
 -(bool)hasFocus { return YES; }
@@ -465,7 +593,7 @@ void extract_bundles();
 }
 - (void)setCursorVisible:(bool)v { /* no-op for iOS */ }
 - (bool)setDisableDisplaySleep:(bool)disable { /* no-op for iOS */ return NO; }
-+(PVRetroArchCore *) get { self; }
++(PVRetroArchCoreBridge *) get { self; }
 -(NSString*)documentsDirectory {
 	if (self.documentsDirectory == nil) {
 #if TARGET_OS_IOS
@@ -478,7 +606,7 @@ void extract_bundles();
 	return self.documentsDirectory;
 }
 - (void)refreshSystemConfig {
-#if TARGET_OS_IOS
+#if TARGET_OS_IOS && !TARGET_OS_TV
 	/* Get enabled orientations */
 	apple_frontend_settings.orientation_flags = UIInterfaceOrientationMaskAll;
 	if (string_is_equal(apple_frontend_settings.orientations, "landscape"))
@@ -494,9 +622,16 @@ void extract_bundles();
 - (void)setupMainWindow { }
 /* Delegate */
 - (void)applicationDidFinishLaunching:(UIApplication *)application { }
-- (void)applicationDidEnterBackground:(UIApplication *)application { }
-- (void)applicationWillTerminate:(UIApplication *)application { }
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    rarch_stop_draw_observer();
+    command_event(CMD_EVENT_SAVE_FILES, NULL);
+}
+- (void)applicationWillTerminate:(UIApplication *)application {
+    rarch_stop_draw_observer();
+}
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    rarch_start_draw_observer();
+
    settings_t *settings            = config_get_ptr();
    bool ui_companion_start_on_boot = settings->bools.ui_companion_start_on_boot;
    if (!ui_companion_start_on_boot)
@@ -523,7 +658,7 @@ void extract_bundles();
 	if (flag) {
 		if (!self.batterySavesPath) {
 			NSFileManager *fm = [[NSFileManager alloc] init];
-			self.batterySavesPath = [NSString stringWithFormat:@"%@/RetroArch/config",[[fm URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject].path];
+			self.batterySavesPath = [NSString stringWithFormat:@"%@/RetroArch/config", self.documentsDirectory];
 			NSString *fileName = [NSString stringWithFormat:@"%@/../../RetroArch/config/retroarch.cfg",
 								  self.batterySavesPath];
 			if ([fm fileExistsAtPath: fileName]) {
@@ -539,9 +674,32 @@ void extract_bundles();
    [self refreshSystemConfig];
 }
 
+void rarch_start_draw_observer(void)
+{
+   if (iterate_observer && CFRunLoopObserverIsValid(iterate_observer))
+       return;
+
+   if (iterate_observer != NULL)
+      CFRelease(iterate_observer);
+   iterate_observer = CFRunLoopObserverCreate(0, kCFRunLoopBeforeWaiting,
+                                              true, 0, rarch_draw_observer, 0);
+   CFRunLoopAddObserver(CFRunLoopGetMain(), iterate_observer, kCFRunLoopCommonModes);
+}
+
+void rarch_stop_draw_observer(void)
+{
+    if (!iterate_observer || !CFRunLoopObserverIsValid(iterate_observer))
+        return;
+    CFRunLoopObserverInvalidate(iterate_observer);
+    CFRelease(iterate_observer);
+    iterate_observer = NULL;
+}
+
 @end
 
 /* RetroArch */
+
+
 void ui_companion_cocoatouch_event_command(
 	  void *data, enum event_command cmd) { }
 
@@ -577,8 +735,10 @@ void bundle_decompressed(retro_task_t *task,
    if (err)
 	   NSLog(@"%s", err);
    if (dec) {
-	  if (!err)
-		 command_event(CMD_EVENT_REINIT, NULL);
+       [_current useRetroArchController:_current.retroArchControls];
+       if (!err) {
+           //command_event(CMD_EVENT_REINIT, NULL);
+       }
 	  free(dec->source_file);
 	  free(dec);
    }
@@ -607,3 +767,32 @@ void main_msg_queue_push(const char *msg,
 	NSLog(@"MSGQ: %s\n", msg);
 }
 
+void menuToggle() {
+    command_event(CMD_EVENT_MENU_TOGGLE, NULL);
+}
+
+bool ios_running_on_ipad(void)
+{
+   return (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad);
+}
+
+ui_companion_driver_t ui_companion_cocoatouch = {
+   NULL, /* init */
+   NULL, /* deinit */
+   NULL, /* toggle */
+   ui_companion_cocoatouch_event_command,
+   NULL, /* notify_refresh */
+   NULL, /* msg_queue_push */
+   NULL, /* render_messagebox */
+   NULL, /* get_main_window */
+   NULL, /* log_msg */
+   NULL, /* is_active */
+   NULL, // ui_companion_cocoatouch_get_app_icons,
+   NULL, // ui_companion_cocoatouch_set_app_icon,
+   NULL, // ui_companion_cocoatouch_get_app_icon_texture,
+   NULL, /* browser_window */
+   NULL, /* msg_window */
+   NULL, /* window */
+   NULL, /* application */
+   "cocoatouch",
+};

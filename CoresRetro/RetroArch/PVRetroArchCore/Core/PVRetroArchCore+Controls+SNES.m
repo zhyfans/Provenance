@@ -1,16 +1,13 @@
 //
-//  PVRetroArchCore+Controls.m
+//  PVRetroArchCoreBridge+Controls.m
 //  PVRetroArch
 //
 //  Created by Joseph Mattiello on 11/1/18.
 //  Copyright © 2021 Provenance. All rights reserved.
 //
 
-#import <PVRetroArch/PVRetroArch.h>
 #import <Foundation/Foundation.h>
-#import <PVSupport/PVSupport.h>
-#import "PVRetroArchCore.h"
-#import "PVRetroArchCore+Controls.h"
+@import PVCoreBridge;
 #import "./cocoa_common.h"
 
 /* RetroArch Includes */
@@ -33,10 +30,10 @@
 #include "../ui_companion_driver.h"
 
 extern GCController *touch_controller;
-@interface PVRetroArchCore (SNESControls) <PVSNESSystemResponderClient>
+@interface PVRetroArchCoreBridge (SNESControls) <PVSNESSystemResponderClient>
 @end
 
-@implementation PVRetroArchCore (SNESControls)
+@implementation PVRetroArchCoreBridge (SNESControls)
 #pragma mark - Control
 - (void)didPushSNESButton:(PVSNESButton)button forPlayer:(NSInteger)player {
     [self handleSNESButton:button forPlayer:player pressed:true];
@@ -68,16 +65,16 @@ extern GCController *touch_controller;
             [touch_controller.extendedGamepad.dpad setValueForXAxis:xAxis yAxis:yAxis];
             break;
         case(PVSNESButtonA):
-            [touch_controller.extendedGamepad.buttonA setValue:pressed?1:0];
-            break;
-        case(PVSNESButtonB):
             [touch_controller.extendedGamepad.buttonB setValue:pressed?1:0];
             break;
+        case(PVSNESButtonB):
+            [touch_controller.extendedGamepad.buttonA setValue:pressed?1:0];
+            break;
         case(PVSNESButtonX):
-            [touch_controller.extendedGamepad.buttonX setValue:pressed?1:0];
+            [touch_controller.extendedGamepad.buttonY setValue:pressed?1:0];
             break;
         case(PVSNESButtonY):
-            [touch_controller.extendedGamepad.buttonY setValue:pressed?1:0];
+            [touch_controller.extendedGamepad.buttonX setValue:pressed?1:0];
             break;
         case(PVSNESButtonTriggerLeft):
             [touch_controller.extendedGamepad.leftShoulder setValue:pressed?1:0];
