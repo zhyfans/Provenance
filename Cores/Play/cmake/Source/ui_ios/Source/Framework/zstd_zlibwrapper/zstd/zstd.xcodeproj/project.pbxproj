@@ -7,56 +7,9 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		0C166A68102548AEB1781C34 /* install */ = {
+		1F81D8D78115457AA9FB1277 /* RUN_TESTS */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 6772369FD50741E9A2AAA984 /* Build configuration list for PBXAggregateTarget "install" */;
-			buildPhases = (
-				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
-			);
-			dependencies = (
-				E029E2C51DEE453EB788698C /* PBXTargetDependency */,
-			);
-			name = install;
-			productName = install;
-		};
-		120E8B02EEEE4188AFB4ABED /* uninstall */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = DD56BDB0ADEF48A3BB09EFD1 /* Build configuration list for PBXAggregateTarget "uninstall" */;
-			buildPhases = (
-				04E054A7854FB375993E9CDB /* Generate lib/CMakeFiles/uninstall */,
-			);
-			dependencies = (
-			);
-			name = uninstall;
-			productName = uninstall;
-		};
-		813B9411ED6148CBBF6FDF45 /* ALL_BUILD */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 9743076C670648EEA258B7F7 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
-			buildPhases = (
-				ECB17722E8DD109F8DB29C4D /* Generate CMakeFiles/ALL_BUILD */,
-			);
-			dependencies = (
-				48A93C67556549CBB86CE1B4 /* PBXTargetDependency */,
-				3BCC2C27C68C4D1FAC56E407 /* PBXTargetDependency */,
-			);
-			name = ALL_BUILD;
-			productName = ALL_BUILD;
-		};
-		81A7140D8C2040F2ACDF825B /* ZERO_CHECK */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = D1476BF018454771A6FE5064 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
-			buildPhases = (
-				B27E73B562585330C645D362 /* Generate CMakeFiles/ZERO_CHECK */,
-			);
-			dependencies = (
-			);
-			name = ZERO_CHECK;
-			productName = ZERO_CHECK;
-		};
-		B7CC82741C444EE0A7828070 /* RUN_TESTS */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 908277812FE4409CA7C9FEC9 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildConfigurationList = B5750A56C7D4436B934C09C9 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
 			buildPhases = (
 				003C8D08B0008F35F218E126 /* CMake PostBuild Rules */,
 			);
@@ -65,279 +18,326 @@
 			name = RUN_TESTS;
 			productName = RUN_TESTS;
 		};
-		D664C27D341945F3B8917920 /* clean-all */ = {
+		3CE69EB366EF41009E321A46 /* package */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = DC4F401F4C764E53B44D3B06 /* Build configuration list for PBXAggregateTarget "clean-all" */;
-			buildPhases = (
-				F3D5F35C3BC165405C247DBC /* Generate CMakeFiles/clean-all */,
-			);
-			dependencies = (
-				87CBB4EC61CF4F358FC5AF2A /* PBXTargetDependency */,
-			);
-			name = "clean-all";
-			productName = "clean-all";
-		};
-		D771A2D4BE7846D7BB9D5A72 /* package */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 42BE6445A7744389BF5F6BAC /* Build configuration list for PBXAggregateTarget "package" */;
+			buildConfigurationList = 6CA4EEAD90ED4EBFAACB42F1 /* Build configuration list for PBXAggregateTarget "package" */;
 			buildPhases = (
 				571234464C2A5D0D43F1AB42 /* CMake PostBuild Rules */,
 			);
 			dependencies = (
-				0C7F143CA7A74115A3CB26C0 /* PBXTargetDependency */,
+				D835C222100A4419862FEDCE /* PBXTargetDependency */,
 			);
 			name = package;
 			productName = package;
 		};
+		7D5675DB9FF34C648823A625 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E9433D7F4F884B98A5FDCA14 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				B27E73B562585330C645D362 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		83967F7FD1F545B5A3A7BD95 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A2EE1A561E89400EAE1DB479 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				ECB17722E8DD109F8DB29C4D /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				CA396CB2F1094EE189EB8064 /* PBXTargetDependency */,
+				27A34068C51F47359B91062E /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		878A0B6654974505BC602C51 /* uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D7E85848626743B78895BA4F /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildPhases = (
+				04E054A7854FB375993E9CDB /* Generate lib/CMakeFiles/uninstall */,
+			);
+			dependencies = (
+			);
+			name = uninstall;
+			productName = uninstall;
+		};
+		95D05D9E0A9845938A35677A /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F5BA059469B84FC5A1A789B1 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				74DBC55824424075BD766FCA /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		B7FEFEADAEA34DB1A461F81E /* clean-all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9A45393233544A67838B5E45 /* Build configuration list for PBXAggregateTarget "clean-all" */;
+			buildPhases = (
+				F3D5F35C3BC165405C247DBC /* Generate CMakeFiles/clean-all */,
+			);
+			dependencies = (
+				6CBDD570FD6249C68DBD269B /* PBXTargetDependency */,
+			);
+			name = "clean-all";
+			productName = "clean-all";
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0370A7D60F604DBAA0489AD0 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.c */ = {isa = PBXBuildFile; fileRef = B844B62F75C145FBBA48D34C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.c */; };
-		0938D10203404CB5BC202434 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.h */ = {isa = PBXBuildFile; fileRef = 1D92624DF37440389930B18C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.h */; };
-		0C52C5177D154F8499A20DB7 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.h */ = {isa = PBXBuildFile; fileRef = FA01839B967C4DE58119ED2C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.h */; };
-		0CD8ABD4286E4F8AB4929494 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.h */ = {isa = PBXBuildFile; fileRef = 36D52A53468341EFAB239B87 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.h */; };
-		10AE5CCF6D5646B1B58E6C50 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.c */ = {isa = PBXBuildFile; fileRef = 500FB8F37FF24FAC9E400F75 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.c */; };
-		12DFE9BBC5FB4536BEB5630B /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.c */ = {isa = PBXBuildFile; fileRef = B8B0BAF6491F4BD49962379A /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.c */; };
-		1361A58109A041A5B2C99CD3 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.c */ = {isa = PBXBuildFile; fileRef = 89FE861D24314321B7B3D334 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.c */; };
-		167E58D981BC46C29C65F284 /* ../Play-/deps/Dependencies/zstd/lib/common/bits.h */ = {isa = PBXBuildFile; fileRef = 07C772E6D04443F28CF5365F /* ../Play-/deps/Dependencies/zstd/lib/common/bits.h */; };
-		1808AE97FB634EF3BD417195 /* ../Play-/deps/Dependencies/zstd/lib/common/huf.h */ = {isa = PBXBuildFile; fileRef = 4359D3300FED4F918262411B /* ../Play-/deps/Dependencies/zstd/lib/common/huf.h */; };
-		1B564AF2D06B471087CFD4CF /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.c */ = {isa = PBXBuildFile; fileRef = D42C6FB34A72454FB45F5C58 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.c */; };
-		1C15D8FF65424F6ABC60F7E7 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress.c */ = {isa = PBXBuildFile; fileRef = 3218CA7314014A8D8ED6B2F3 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress.c */; };
-		1FB76D6737674F39B56BB1E6 /* ../Play-/deps/Dependencies/zstd/lib/common/debug.c */ = {isa = PBXBuildFile; fileRef = C922F147E51C48919907845D /* ../Play-/deps/Dependencies/zstd/lib/common/debug.c */; };
-		21F2BF305BE042F3999175D8 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.h */ = {isa = PBXBuildFile; fileRef = 5AA8AEFC3E9C47DDB545D4E5 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.h */; };
-		2294B534A15F415782CE9B96 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.h */ = {isa = PBXBuildFile; fileRef = 3FBBBC3D6B714C58B84FD228 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.h */; };
-		27375EB6DE95417B992AC320 /* ../Play-/deps/Dependencies/zstd/lib/common/compiler.h */ = {isa = PBXBuildFile; fileRef = 2EC4D8D91D9048EBB1BE746F /* ../Play-/deps/Dependencies/zstd/lib/common/compiler.h */; };
-		2A640483C6634013B2CA54F0 /* ../Play-/deps/Dependencies/zstd/lib/common/pool.c */ = {isa = PBXBuildFile; fileRef = 7336B4DBADC944CAB8617D3B /* ../Play-/deps/Dependencies/zstd/lib/common/pool.c */; };
-		2E21562CF63F4CEF88002ABF /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.c */ = {isa = PBXBuildFile; fileRef = CD01CF32E6FC452CA338D129 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.c */; };
-		33991A6F945744158A6E09FA /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_internal.h */ = {isa = PBXBuildFile; fileRef = DCCBE47A4A514B1797BD91FD /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_internal.h */; };
-		363F1085CC75435982CB7CCE /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.h */ = {isa = PBXBuildFile; fileRef = EDF2219D4ACB4D72B2600ACE /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.h */; };
-		413EA7B8BE4C4F71A6D8037E /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.h */ = {isa = PBXBuildFile; fileRef = DA70923140AE408CB3BD323C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.h */; };
-		41EB9DBBB1894216B0A9D3F3 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.h */ = {isa = PBXBuildFile; fileRef = 23BB0CE1CC30475EBB4DA782 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.h */; };
-		431C58B99E5A404290C2EA54 /* ../Play-/deps/Dependencies/zstd/lib/compress/fse_compress.c */ = {isa = PBXBuildFile; fileRef = 26DB333EEBCB4CB8B7BCFBCB /* ../Play-/deps/Dependencies/zstd/lib/compress/fse_compress.c */; };
-		49E22F4DAC5A40D68201A89C /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress.c */ = {isa = PBXBuildFile; fileRef = 47C634DBAF8342688129AF82 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress.c */; };
-		4F879BF000D04EB08B1F9E28 /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.c */ = {isa = PBXBuildFile; fileRef = 1079B154BEF64B60AFF95AB0 /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.c */; };
-		506E721C5ECE4D02B2CE2F9B /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.c */ = {isa = PBXBuildFile; fileRef = D824C4D134EA4793B0C73049 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.c */; };
-		5525B917B8C44A7290818F69 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress_amd64.S */ = {isa = PBXBuildFile; fileRef = 86A306CD850D4AABB8E39E53 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress_amd64.S */; };
-		55A892DAD98344AE8BB11ECA /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_trace.h */ = {isa = PBXBuildFile; fileRef = CD5C5605A9644787AAB0C24E /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_trace.h */; };
-		60009C9682804436864D2B59 /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_deps.h */ = {isa = PBXBuildFile; fileRef = 73391C7E84784E058FEB80AA /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_deps.h */; };
-		643E77EEACC64092937E8BC6 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.h */ = {isa = PBXBuildFile; fileRef = B38EAA60EF33472DB6A04BCC /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.h */; };
-		67009BD8A6D64F5494CE28C2 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.c */ = {isa = PBXBuildFile; fileRef = D47247BC74D2431EAA9E2B2B /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.c */; };
-		69C1751CCF8142E598A482AC /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.c */ = {isa = PBXBuildFile; fileRef = D10020029C954FC7BC19FA71 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.c */; };
-		6B7BF7B507F54A0A81E36874 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.c */ = {isa = PBXBuildFile; fileRef = 77BB8690BF144074BDC7D328 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.c */; };
-		6C2976AE3AA44AF1B55743BF /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_internal.h */ = {isa = PBXBuildFile; fileRef = 118BD7C5151243B089D8F98A /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_internal.h */; };
-		75B5D8B76F7641E9A18752CA /* ../Play-/deps/Dependencies/zstd/lib/zstd.h */ = {isa = PBXBuildFile; fileRef = 0088D7B865A941748743A503 /* ../Play-/deps/Dependencies/zstd/lib/zstd.h */; };
-		767CE491A2ED440093E3A86C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.c */ = {isa = PBXBuildFile; fileRef = 7B6A51A63BD245598CC3E351 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.c */; };
-		76828916318E48FF85ED33C5 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.c */ = {isa = PBXBuildFile; fileRef = C1552DACFA5043D78BFDDEEA /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.c */; };
-		7A645861A93D489D915A16D1 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.c */ = {isa = PBXBuildFile; fileRef = F9610DB2668547C39C5D6505 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.c */; };
-		7CB32AAA0C0D426FB1EE9F50 /* ../Play-/deps/Dependencies/zstd/lib/compress/huf_compress.c */ = {isa = PBXBuildFile; fileRef = 62B5C029DBD04274BD583416 /* ../Play-/deps/Dependencies/zstd/lib/compress/huf_compress.c */; };
-		7EF4F8B187494588A474A694 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_internal.h */ = {isa = PBXBuildFile; fileRef = FB69D16130DE4E9FB5D65339 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_internal.h */; };
-		89AD56FBA05B4EFAA195D105 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.h */ = {isa = PBXBuildFile; fileRef = 4125700646F343B59562CC92 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.h */; };
-		8CC3970FEB944FAAB726EFCB /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.h */ = {isa = PBXBuildFile; fileRef = 5B74162243C84B338D95645C /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.h */; };
-		9065DF470B9F43DE8D3B4769 /* ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/CMakeFiles/libzstd_static.dir/Info.plist */ = {isa = PBXBuildFile; fileRef = 8BA17B7163BB4885AC7A906A /* ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/CMakeFiles/libzstd_static.dir/Info.plist */; };
-		9116D9EFA63A48C1893F4704 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.h */ = {isa = PBXBuildFile; fileRef = A22F452FDF4A4A3B923A4E49 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.h */; };
-		949B5702FF9444F390BD2C8C /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_common.c */ = {isa = PBXBuildFile; fileRef = 7D6F7DFC70FA4B51A4E84F75 /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_common.c */; };
-		94E952D52B5D40478492448E /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/zdict.c */ = {isa = PBXBuildFile; fileRef = 3970204C6040465784AF311D /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/zdict.c */; };
-		9713B4D87A1243A8900193A5 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.c */ = {isa = PBXBuildFile; fileRef = 3731AD634E5F427C8B523C3F /* ../Play-/deps/Dependencies/zstd/lib/common/threading.c */; };
-		973C6197C1EB4F7F8F4CE49E /* ../Play-/deps/Dependencies/zstd/lib/common/mem.h */ = {isa = PBXBuildFile; fileRef = 8B4D90A8DC5042F7B08C9DEC /* ../Play-/deps/Dependencies/zstd/lib/common/mem.h */; };
-		9CDBB7FC188A4B7DAC69B7C5 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.h */ = {isa = PBXBuildFile; fileRef = 9A6A07D1BE4E47DAA9F0265E /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.h */; };
-		9D3448CAC67E4AB7A3BD46EA /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.c */ = {isa = PBXBuildFile; fileRef = AAD856E0024542E3A0917F74 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.c */; };
-		A57B01113A54488DA2D11106 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.h */ = {isa = PBXBuildFile; fileRef = FF7D99EEACCF4EE9822440CF /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.h */; };
-		A594576EC1D64755853D3788 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.h */ = {isa = PBXBuildFile; fileRef = 33CF1916C36F4992A3AEABFC /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.h */; };
-		A7270535CA4C4F7384C2520A /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.c */ = {isa = PBXBuildFile; fileRef = 7EBC9831F59D449FB0674AFA /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.c */; };
-		A86D6030B1E947DC8D8E0F39 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.c */ = {isa = PBXBuildFile; fileRef = 41B73FC142DA4D518E94DB1F /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.c */; };
-		A8AE54D5F7F6473F9CB1A9E2 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_legacy.h */ = {isa = PBXBuildFile; fileRef = DC63EA3826954511AB30A645 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_legacy.h */; };
-		AA907F620A964D88B6415024 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress.c */ = {isa = PBXBuildFile; fileRef = E2C2DD10C69C42118871888A /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress.c */; };
-		AB750E611E194047BF9B5AB3 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.h */ = {isa = PBXBuildFile; fileRef = 5156F1E86F6940C7B5DB32D2 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.h */; };
-		B37BEDB9892A4E8295BE8560 /* ../Play-/deps/Dependencies/zstd/build/cmake/lib/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 96B81C37DD3B4F2ABD9E4A0E /* ../Play-/deps/Dependencies/zstd/build/cmake/lib/CMakeLists.txt */; };
-		B45712F5D3EF47A5B6C1915D /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.h */ = {isa = PBXBuildFile; fileRef = F7E50D584AA24345A2902C6A /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.h */; };
-		B503F29CD32E47B29A0EAE1B /* ../Play-/deps/Dependencies/zstd/lib/common/cpu.h */ = {isa = PBXBuildFile; fileRef = 0C1910655655443193248B06 /* ../Play-/deps/Dependencies/zstd/lib/common/cpu.h */; };
-		B6F38519071E4365BDD5D64B /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_cwksp.h */ = {isa = PBXBuildFile; fileRef = F4C576FFAA8D476ABB3250F0 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_cwksp.h */; };
-		B8B7AE6CAE9140C58B9C3FCB /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.h */ = {isa = PBXBuildFile; fileRef = AE0AD652A25841FAB3261CE4 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.h */; };
-		C2042A6873014D499680D4E7 /* ../Play-/deps/Dependencies/zstd/lib/common/debug.h */ = {isa = PBXBuildFile; fileRef = 6F43CDE1945D4C2CACD914D5 /* ../Play-/deps/Dependencies/zstd/lib/common/debug.h */; };
-		C21095DE5EFF4786AB957D93 /* ../Play-/deps/Dependencies/zstd/lib/compress/clevels.h */ = {isa = PBXBuildFile; fileRef = 4F0E0EC7D48349FCB615630A /* ../Play-/deps/Dependencies/zstd/lib/compress/clevels.h */; };
-		C9B3E8A5F62A4FC7875D552B /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.c */ = {isa = PBXBuildFile; fileRef = F7979D014BDC471FB32C7ECA /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.c */; };
-		CD4F36D9519E4283BBAFDB75 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/fastcover.c */ = {isa = PBXBuildFile; fileRef = 1A381938E23C4BB1AAEE6BCE /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/fastcover.c */; };
-		CDABFF589C2B40D48151E6A9 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.c */ = {isa = PBXBuildFile; fileRef = 94E0A09A598F46D98F01C983 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.c */; };
-		D19765C1116B4CB38BFE7388 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.c */ = {isa = PBXBuildFile; fileRef = 0E7A248B4E3E4E53ADAA65CC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.c */; };
-		D4D10FF3DF5147D58EA78115 /* ../Play-/deps/Dependencies/zstd/lib/common/entropy_common.c */ = {isa = PBXBuildFile; fileRef = 281AF70F1E6B466881508A0C /* ../Play-/deps/Dependencies/zstd/lib/common/entropy_common.c */; };
-		DC344C74CFBE4D639D915E1A /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.h */ = {isa = PBXBuildFile; fileRef = B541D399F89B410F94A25B40 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.h */; };
-		E4C06FDF151840F88C5A2AB2 /* ../Play-/deps/Dependencies/zstd/lib/common/fse.h */ = {isa = PBXBuildFile; fileRef = 462521939C394DA8A5EA5C7C /* ../Play-/deps/Dependencies/zstd/lib/common/fse.h */; };
-		E6BA0200898049218B92B6BC /* ../Play-/deps/Dependencies/zstd/lib/common/fse_decompress.c */ = {isa = PBXBuildFile; fileRef = 46DAEC5823C342C19253F168 /* ../Play-/deps/Dependencies/zstd/lib/common/fse_decompress.c */; };
-		E75D95AB992F431AB6FC116A /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.h */ = {isa = PBXBuildFile; fileRef = 8E3DFCFA3BCF4A77A05985B2 /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.h */; };
-		E825E104E8E54287978DF533 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.c */ = {isa = PBXBuildFile; fileRef = 891026D63D7D4997864CC0AA /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.c */; };
-		EBD5CE0CD18B435DA3ADD00B /* ../Play-/deps/Dependencies/zstd/lib/common/portability_macros.h */ = {isa = PBXBuildFile; fileRef = A7BECA6194FE4673BC209A6B /* ../Play-/deps/Dependencies/zstd/lib/common/portability_macros.h */; };
-		ED36D75613134B1E9300F90A /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.h */ = {isa = PBXBuildFile; fileRef = 6BCF16DA6A7A4426A0F2E575 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.h */; };
-		EF1EAEEAF84642DFA06EEAD8 /* ../Play-/deps/Dependencies/zstd/lib/common/pool.h */ = {isa = PBXBuildFile; fileRef = 78C114D79C774F8D970F7565 /* ../Play-/deps/Dependencies/zstd/lib/common/pool.h */; };
-		F0ABE67A8BCA4343A2D74C06 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.c */ = {isa = PBXBuildFile; fileRef = 44110151A3A64183BE6E5BF3 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.c */; };
-		F146CEF5BC0A4A3F890C6E7D /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.h */ = {isa = PBXBuildFile; fileRef = 19A482C1EBDA48479DA03838 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.h */; };
-		F1A74373AB03481C9ACD8421 /* ../Play-/deps/Dependencies/zstd/lib/common/bitstream.h */ = {isa = PBXBuildFile; fileRef = F3D6795D1D46428F9A5B84CE /* ../Play-/deps/Dependencies/zstd/lib/common/bitstream.h */; };
-		F1EF3750A94141FA9E97FB16 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.c */ = {isa = PBXBuildFile; fileRef = 9D7A871A2A6541808EA09943 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.c */; };
-		F5961A3F7F8748E0B35CAD03 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.h */ = {isa = PBXBuildFile; fileRef = 2792269B7DC247F5B3621447 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.h */; };
-		F6AFE82070A24D49B86DC6B7 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm_geartab.h */ = {isa = PBXBuildFile; fileRef = 939968E24087419A8B1A29A8 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm_geartab.h */; };
-		FE4AA340C9CF4659A47AE0C0 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.h */ = {isa = PBXBuildFile; fileRef = 73CCF4A3E2544145B6E50EDC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.h */; };
+		02D0070CD7B4435B9F39200E /* ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/CMakeFiles/libzstd_static.dir/Info.plist */ = {isa = PBXBuildFile; fileRef = DB152AF9A68344D483A06990 /* ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/CMakeFiles/libzstd_static.dir/Info.plist */; };
+		033E2E3C9D1846C29920FCF8 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_legacy.h */ = {isa = PBXBuildFile; fileRef = 6F5A9E7274444CCB93BB3665 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_legacy.h */; };
+		07E1D0A411AF4374862A83B2 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.h */ = {isa = PBXBuildFile; fileRef = 214BB38D0B5F4D8697206B96 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.h */; };
+		0D3D0D020EB94CA0A120C5E5 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.h */ = {isa = PBXBuildFile; fileRef = 0A5D871015DF428995082ED5 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.h */; };
+		0ECA671ABC5548FE945208ED /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.h */ = {isa = PBXBuildFile; fileRef = 9DA1A6EA0790434EA84CF4E1 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.h */; };
+		143F728FD925466AAB34BBF6 /* ../Play-/deps/Dependencies/zstd/build/cmake/lib/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 20D7EBCAC39A42BC9614A177 /* ../Play-/deps/Dependencies/zstd/build/cmake/lib/CMakeLists.txt */; };
+		14D075170E284BFB81A91B3A /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.c */ = {isa = PBXBuildFile; fileRef = 4ACB92FF541B469C9996C8D5 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.c */; };
+		1AD9929B1FD444C390492E01 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress.c */ = {isa = PBXBuildFile; fileRef = A61A42C95BF744619182FC63 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress.c */; };
+		1DE648C3845043C59773049E /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.c */ = {isa = PBXBuildFile; fileRef = 26BD2D4DBB6A4EB6905D33EE /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.c */; };
+		1E0FCF40D785434A9109BA90 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.h */ = {isa = PBXBuildFile; fileRef = 951DE603A0194F43919F18EC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.h */; };
+		1ECF716803884967BB1D7469 /* ../Play-/deps/Dependencies/zstd/lib/common/compiler.h */ = {isa = PBXBuildFile; fileRef = A5F816048E3542A0B8341D79 /* ../Play-/deps/Dependencies/zstd/lib/common/compiler.h */; };
+		2155EB4D89ED4F098C54AFCB /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.c */ = {isa = PBXBuildFile; fileRef = 6F21F875C392417B8642400B /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.c */; };
+		22150CB5973440E898064604 /* ../Play-/deps/Dependencies/zstd/lib/common/debug.h */ = {isa = PBXBuildFile; fileRef = 64AD7FA3E1674CCAB7302E8E /* ../Play-/deps/Dependencies/zstd/lib/common/debug.h */; };
+		237A4B11D34B4C06A8069C4D /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.c */ = {isa = PBXBuildFile; fileRef = 5F3C8426DD034412BC34D30D /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.c */; };
+		263ACDAD85044F3A91B806FF /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.c */ = {isa = PBXBuildFile; fileRef = AED10285EF4A420699934697 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.c */; };
+		28BC801049474FACBEBAE21D /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.h */ = {isa = PBXBuildFile; fileRef = 39A3043A80674E679398F82B /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.h */; };
+		28FD02C9F2004C9C95765CC7 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.c */ = {isa = PBXBuildFile; fileRef = 02DA1AD163CE4B288F326FE4 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.c */; };
+		29DD92C9E734491B8A668A1E /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.h */ = {isa = PBXBuildFile; fileRef = A841B37E01FA4DA4B775C13E /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.h */; };
+		2A0CEE99D306480D88BE99E6 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.c */ = {isa = PBXBuildFile; fileRef = 7A0025D78A114361BCF2D1F0 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.c */; };
+		2D54A12426A842B0B467A16D /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.h */ = {isa = PBXBuildFile; fileRef = 467973C79BF64D16AE414D5C /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.h */; };
+		2E7CA9293A284B608F746AB7 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/zdict.c */ = {isa = PBXBuildFile; fileRef = 706588B514464C2F912737E3 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/zdict.c */; };
+		308A0A61D09B417A9F4224E5 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.h */ = {isa = PBXBuildFile; fileRef = 3F88149C39EC4479A6370646 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.h */; };
+		383071078725491280A19833 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.c */ = {isa = PBXBuildFile; fileRef = A79F5CEF66CD4843B7ED6748 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.c */; };
+		3B23B0B20FED4044BDB450EF /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.c */ = {isa = PBXBuildFile; fileRef = 34E5EB64A94A408D916C4962 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.c */; };
+		4072C409C8FC425DBFC64890 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.c */ = {isa = PBXBuildFile; fileRef = 0907BFA01682473A8F7EB140 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.c */; };
+		432DC2B7CD3545C881DE28B0 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.c */ = {isa = PBXBuildFile; fileRef = C6507B5AF697466AAC828B90 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.c */; };
+		47A1F669F9544EE5847ABD99 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.c */ = {isa = PBXBuildFile; fileRef = 6B4D0494C96D420B8966A247 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.c */; };
+		49E645BA9E754571921B20A3 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_cwksp.h */ = {isa = PBXBuildFile; fileRef = FC7375AEEE094AF79E370083 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_cwksp.h */; };
+		4C53F472778F4183A55F0E9E /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.c */ = {isa = PBXBuildFile; fileRef = FB4CD5140AFC481D981DDA1F /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.c */; };
+		50127AC90D8B4D0FB328EB03 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.c */ = {isa = PBXBuildFile; fileRef = E59D77D678754413847A30E5 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.c */; };
+		519C01A8D08247A8AD7AC98F /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.c */ = {isa = PBXBuildFile; fileRef = 38042C6FA2264370889A484B /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.c */; };
+		571A3AB86EDE4A138F4410AF /* ../Play-/deps/Dependencies/zstd/lib/compress/clevels.h */ = {isa = PBXBuildFile; fileRef = 9D6DD81730234852957E6CF4 /* ../Play-/deps/Dependencies/zstd/lib/compress/clevels.h */; };
+		59134E482EA94298B21BE4BA /* ../Play-/deps/Dependencies/zstd/lib/common/bits.h */ = {isa = PBXBuildFile; fileRef = 0FD0BDAC1AFD4D59A15496B1 /* ../Play-/deps/Dependencies/zstd/lib/common/bits.h */; };
+		5D3F53325912496DA09643B7 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.h */ = {isa = PBXBuildFile; fileRef = BF56EE9283CC4A6491EA2CF7 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.h */; };
+		601292CE88FD45469957CDB3 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.h */ = {isa = PBXBuildFile; fileRef = C577C6BE91CE4ED98ED7C4FC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.h */; };
+		6063CA10B4214262AC194BA3 /* ../Play-/deps/Dependencies/zstd/lib/common/fse_decompress.c */ = {isa = PBXBuildFile; fileRef = 34A2DB3B97F1408BBA1B2117 /* ../Play-/deps/Dependencies/zstd/lib/common/fse_decompress.c */; };
+		656387D539BB4928A90190ED /* ../Play-/deps/Dependencies/zstd/lib/common/huf.h */ = {isa = PBXBuildFile; fileRef = 7A64011052194B508B3C8620 /* ../Play-/deps/Dependencies/zstd/lib/common/huf.h */; };
+		688558A54C454CDF8F3E4C90 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/fastcover.c */ = {isa = PBXBuildFile; fileRef = B8644C1F1D9D4D7994127BFB /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/fastcover.c */; };
+		73B29D0AF22C431AAB4F1EDA /* ../Play-/deps/Dependencies/zstd/lib/common/debug.c */ = {isa = PBXBuildFile; fileRef = 275E24CF25ED40F0AB276F91 /* ../Play-/deps/Dependencies/zstd/lib/common/debug.c */; };
+		74B22AE40CE14586924A72C1 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.h */ = {isa = PBXBuildFile; fileRef = EFD91807E62A4B7F85CE9D3C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.h */; };
+		7893D81075C54941B79C6DE0 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress.c */ = {isa = PBXBuildFile; fileRef = 7243B659FFFA4B6CBA53A64E /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress.c */; };
+		799F7428D6574BE787A8AF2C /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.h */ = {isa = PBXBuildFile; fileRef = E0673CD137C345868F79FCDC /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.h */; };
+		7A2378E35C394D149446B6B4 /* ../Play-/deps/Dependencies/zstd/lib/common/pool.c */ = {isa = PBXBuildFile; fileRef = 088AF00BC2AB4A4B901C8A1E /* ../Play-/deps/Dependencies/zstd/lib/common/pool.c */; };
+		7AC7C1ACC38A4F7786A94DA3 /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_deps.h */ = {isa = PBXBuildFile; fileRef = FBB654F0D6D843E1BABF658A /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_deps.h */; };
+		7F3FFCE0B3DE466E9CDF09AF /* ../Play-/deps/Dependencies/zstd/lib/common/entropy_common.c */ = {isa = PBXBuildFile; fileRef = A49FD0B90D6144AD8241D70D /* ../Play-/deps/Dependencies/zstd/lib/common/entropy_common.c */; };
+		8653B6002BAC4BF18E7B8A61 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.h */ = {isa = PBXBuildFile; fileRef = BEE38CEE5D7443909720D571 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.h */; };
+		866D73E6888D418495A66D35 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_internal.h */ = {isa = PBXBuildFile; fileRef = 24C2A3C8CEE545D5B6332CDB /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_internal.h */; };
+		880C320226E149EEAED2D310 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.c */ = {isa = PBXBuildFile; fileRef = 4117BA38C8B341219A784581 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.c */; };
+		8BE90CD5FFC04553853E5790 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.h */ = {isa = PBXBuildFile; fileRef = 11DAFE53F5204FA2A64383F8 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.h */; };
+		8D80DE4B9BB04813B428A845 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.c */ = {isa = PBXBuildFile; fileRef = 7BAC5871B16C45D7ABEECFC7 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.c */; };
+		8F64500C7F6247AA8FF05D5B /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.c */ = {isa = PBXBuildFile; fileRef = 8F61D28C4E62400E9CC815D5 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.c */; };
+		8F940CA2E03C430CAF77C508 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.c */ = {isa = PBXBuildFile; fileRef = A97F3301537C49BE8434B3B5 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.c */; };
+		95F602852D8B4AE88F432CAA /* ../Play-/deps/Dependencies/zstd/lib/common/mem.h */ = {isa = PBXBuildFile; fileRef = 1895324DA4654992A4174892 /* ../Play-/deps/Dependencies/zstd/lib/common/mem.h */; };
+		98A2FCDB64074EE3851E1B1F /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress.c */ = {isa = PBXBuildFile; fileRef = 25EF218D00824E56B815AF94 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress.c */; };
+		A38DF342A54D4ADBA9EF27AF /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.c */ = {isa = PBXBuildFile; fileRef = 9DF6FD90A04F4DD9A8FE45B8 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.c */; };
+		A7A13CBE5ED8443483A1C6CC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.h */ = {isa = PBXBuildFile; fileRef = 07D8F80504AC41F4AFBC745F /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.h */; };
+		A7B0A22CF58F4F7B97E76A96 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.c */ = {isa = PBXBuildFile; fileRef = F3DAF0B15A5F4D0B8D219FA8 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.c */; };
+		A852B1A6533E4AD3AA613D7A /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.h */ = {isa = PBXBuildFile; fileRef = E3261227B7364EEC80FBCCA9 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.h */; };
+		AEC37A0829224A5FB8949441 /* ../Play-/deps/Dependencies/zstd/lib/zstd.h */ = {isa = PBXBuildFile; fileRef = 2A2DE30FBA1D419F9356723D /* ../Play-/deps/Dependencies/zstd/lib/zstd.h */; };
+		B0B00F0DDDFF470BA9C78A23 /* ../Play-/deps/Dependencies/zstd/lib/compress/fse_compress.c */ = {isa = PBXBuildFile; fileRef = 3EB1CB55EC4943B28AD429C7 /* ../Play-/deps/Dependencies/zstd/lib/compress/fse_compress.c */; };
+		B1C161A004CB4C19886D1D00 /* ../Play-/deps/Dependencies/zstd/lib/common/bitstream.h */ = {isa = PBXBuildFile; fileRef = 46475EDA55F9413FBBBDDDF5 /* ../Play-/deps/Dependencies/zstd/lib/common/bitstream.h */; };
+		B1C5A54F2AED44278501B60B /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_common.c */ = {isa = PBXBuildFile; fileRef = C7DFE5176B6F4DC489AAEEDD /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_common.c */; };
+		B222BAB2A4564E2EAD59F66C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_internal.h */ = {isa = PBXBuildFile; fileRef = 6F966F86C12547FF87736CF9 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_internal.h */; };
+		B8F5FCF3809648768EB5EF3D /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_internal.h */ = {isa = PBXBuildFile; fileRef = FD76229051F84DB9BAF93493 /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_internal.h */; };
+		BE56C4C60A5B4FBCA83DDB5E /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.h */ = {isa = PBXBuildFile; fileRef = 5795D2FA1D774F6FA8B6A1D5 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.h */; };
+		C3384A8AF9FA4989ACB13017 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress_amd64.S */ = {isa = PBXBuildFile; fileRef = 17E0B95860384428A4225AC6 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress_amd64.S */; };
+		C359B7BDA27344BCAE7368A9 /* ../Play-/deps/Dependencies/zstd/lib/common/cpu.h */ = {isa = PBXBuildFile; fileRef = 9786EA1841A947E9A1665ABC /* ../Play-/deps/Dependencies/zstd/lib/common/cpu.h */; };
+		C4B500DAAA144D879856B841 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.h */ = {isa = PBXBuildFile; fileRef = 42157ED6547141C8AF1F9AB4 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.h */; };
+		C4F9F29A2F37417E9C190A23 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.h */ = {isa = PBXBuildFile; fileRef = 0441FBC5CAB94DADB138D150 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.h */; };
+		C58A14909BF340488CDDF62B /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_trace.h */ = {isa = PBXBuildFile; fileRef = 4CD1B291D8294F6BA7585560 /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_trace.h */; };
+		CB7D263FBDE843D6881D5236 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm_geartab.h */ = {isa = PBXBuildFile; fileRef = 46851A6754C649949A6D7226 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm_geartab.h */; };
+		CF2B6D648AB147C5A3284D57 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.h */ = {isa = PBXBuildFile; fileRef = 6B588F94E0E34634855CE552 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.h */; };
+		CFCA85509328480BAB8A1D57 /* ../Play-/deps/Dependencies/zstd/lib/common/fse.h */ = {isa = PBXBuildFile; fileRef = 5286C00E1717449B8D1E1BC9 /* ../Play-/deps/Dependencies/zstd/lib/common/fse.h */; };
+		D01237DB2F254905AA0CF4E4 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.c */ = {isa = PBXBuildFile; fileRef = F48536C5FA3241EBAEF5828E /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.c */; };
+		DC6E575C9F974E3B817CCE56 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.h */ = {isa = PBXBuildFile; fileRef = B9BD98EF1C1342BF9EE85F43 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.h */; };
+		DDE435D748A543BEBD99BD00 /* ../Play-/deps/Dependencies/zstd/lib/common/portability_macros.h */ = {isa = PBXBuildFile; fileRef = E0B10C50CBB54F7AA90C5DD0 /* ../Play-/deps/Dependencies/zstd/lib/common/portability_macros.h */; };
+		F00309E983B6491A94A88945 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.h */ = {isa = PBXBuildFile; fileRef = D1BC5E06DDE9448AA038E0C1 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.h */; };
+		F0833EDECEF94E76A7677256 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.c */ = {isa = PBXBuildFile; fileRef = 3084C67850DC4F0BAD47B59C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.c */; };
+		F243DDA15BC24A53A7A74B5B /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.h */ = {isa = PBXBuildFile; fileRef = 49B3E74EAED04ED8BCBE7277 /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.h */; };
+		F7818843F4D540509A35F515 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.h */ = {isa = PBXBuildFile; fileRef = F1DEEE74869D4039A5D7941A /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.h */; };
+		F7B74DFB599946A99B770584 /* ../Play-/deps/Dependencies/zstd/lib/common/pool.h */ = {isa = PBXBuildFile; fileRef = CA7B5B3DFCA9479AB1ACF5F6 /* ../Play-/deps/Dependencies/zstd/lib/common/pool.h */; };
+		F9081C55B44040A3A8B8B054 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.c */ = {isa = PBXBuildFile; fileRef = 5BC7874420D34A7292ABA655 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.c */; };
+		FC50EAFA37634C1AB56C9A86 /* ../Play-/deps/Dependencies/zstd/lib/compress/huf_compress.c */ = {isa = PBXBuildFile; fileRef = A9A26DD0F43A43A2A6B9C377 /* ../Play-/deps/Dependencies/zstd/lib/compress/huf_compress.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		160EA60AFC0E4F6B90E40CC1 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		51961E3E8DF3441093F16D66 /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		70948BF3BC7F484E98030B24 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		C727A1088A47472EA859E078 /* RelWithDebInfo */ = {
+		37F785A0D18F4FEC86B97A94 /* RelWithDebInfo */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = RelWithDebInfo;
 		};
+		47E6C72862E44FEF87AADCA2 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		C189E685901042DBA3478029 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		E00DF29BEB7042A4BE9BC302 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		36436EF615FB42C2AFB068C3 /* PBXContainerItemProxy */ = {
+		1E26DEADDD0047E484679FF1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2FA64775A0044CD3A5BE7C05 /* Project object */;
+			containerPortal = FE71BB3CEE234B82A5251D6D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D72824E600034786A2A9F513;
+			remoteGlobalIDString = 83967F7FD1F545B5A3A7BD95;
+			remoteInfo = ALL_BUILD;
+		};
+		4CC60A16478A4F01AFC2192F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE71BB3CEE234B82A5251D6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D5675DB9FF34C648823A625;
+			remoteInfo = ZERO_CHECK;
+		};
+		E675399B3C3C45EB9EE36CC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE71BB3CEE234B82A5251D6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83967F7FD1F545B5A3A7BD95;
+			remoteInfo = ALL_BUILD;
+		};
+		ED32F89B404B4EF98C615BF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE71BB3CEE234B82A5251D6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29109A4C926E409898D7C057;
 			remoteInfo = libzstd_static;
 		};
-		418E3D72C8D9491B8AD3EB56 /* PBXContainerItemProxy */ = {
+		FE81118326094E40A0E4F0BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2FA64775A0044CD3A5BE7C05 /* Project object */;
+			containerPortal = FE71BB3CEE234B82A5251D6D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 81A7140D8C2040F2ACDF825B;
+			remoteGlobalIDString = 7D5675DB9FF34C648823A625;
 			remoteInfo = ZERO_CHECK;
-		};
-		BA6081D000AF43D891A99BFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FA64775A0044CD3A5BE7C05 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 81A7140D8C2040F2ACDF825B;
-			remoteInfo = ZERO_CHECK;
-		};
-		C5AC9FEFCA1F4F649DDB6A13 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FA64775A0044CD3A5BE7C05 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 813B9411ED6148CBBF6FDF45;
-			remoteInfo = ALL_BUILD;
-		};
-		E3F4547671DC4532B9821F0F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FA64775A0044CD3A5BE7C05 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 813B9411ED6148CBBF6FDF45;
-			remoteInfo = ALL_BUILD;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0088D7B865A941748743A503 /* ../Play-/deps/Dependencies/zstd/lib/zstd.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd.h; path = "../Play-/deps/Dependencies/zstd/lib/zstd.h"; sourceTree = "<absolute>"; };
-		07C772E6D04443F28CF5365F /* ../Play-/deps/Dependencies/zstd/lib/common/bits.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bits.h; path = "../Play-/deps/Dependencies/zstd/lib/common/bits.h"; sourceTree = "<absolute>"; };
-		0C1910655655443193248B06 /* ../Play-/deps/Dependencies/zstd/lib/common/cpu.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cpu.h; path = "../Play-/deps/Dependencies/zstd/lib/common/cpu.h"; sourceTree = "<absolute>"; };
-		0E7A248B4E3E4E53ADAA65CC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_fast.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.c"; sourceTree = "<absolute>"; };
-		1079B154BEF64B60AFF95AB0 /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = error_private.c; path = "../Play-/deps/Dependencies/zstd/lib/common/error_private.c"; sourceTree = "<absolute>"; };
-		118BD7C5151243B089D8F98A /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_compress_internal.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_internal.h"; sourceTree = "<absolute>"; };
-		19A482C1EBDA48479DA03838 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_opt.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.h"; sourceTree = "<absolute>"; };
-		1A381938E23C4BB1AAEE6BCE /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/fastcover.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fastcover.c; path = "../Play-/deps/Dependencies/zstd/lib/dictBuilder/fastcover.c"; sourceTree = "<absolute>"; };
-		1D92624DF37440389930B18C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstdmt_compress.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.h"; sourceTree = "<absolute>"; };
-		23BB0CE1CC30475EBB4DA782 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = xxhash.h; path = "../Play-/deps/Dependencies/zstd/lib/common/xxhash.h"; sourceTree = "<absolute>"; };
-		243DCC9581FC42E784F6954D /* ../Play-/deps/Dependencies/zstd/build/cmake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		26DB333EEBCB4CB8B7BCFBCB /* ../Play-/deps/Dependencies/zstd/lib/compress/fse_compress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fse_compress.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/fse_compress.c"; sourceTree = "<absolute>"; };
-		2792269B7DC247F5B3621447 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_compress_sequences.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.h"; sourceTree = "<absolute>"; };
-		281AF70F1E6B466881508A0C /* ../Play-/deps/Dependencies/zstd/lib/common/entropy_common.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = entropy_common.c; path = "../Play-/deps/Dependencies/zstd/lib/common/entropy_common.c"; sourceTree = "<absolute>"; };
-		2914A197832F4675ADA9F2ED /* ../Play-/deps/Dependencies/zstd/build/cmake/lib/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = lib/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		2EC4D8D91D9048EBB1BE746F /* ../Play-/deps/Dependencies/zstd/lib/common/compiler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = compiler.h; path = "../Play-/deps/Dependencies/zstd/lib/common/compiler.h"; sourceTree = "<absolute>"; };
-		3218CA7314014A8D8ED6B2F3 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_decompress.c; path = "../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress.c"; sourceTree = "<absolute>"; };
-		33CF1916C36F4992A3AEABFC /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = divsufsort.h; path = "../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.h"; sourceTree = "<absolute>"; };
-		36D52A53468341EFAB239B87 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v06.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.h"; sourceTree = "<absolute>"; };
-		3731AD634E5F427C8B523C3F /* ../Play-/deps/Dependencies/zstd/lib/common/threading.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = threading.c; path = "../Play-/deps/Dependencies/zstd/lib/common/threading.c"; sourceTree = "<absolute>"; };
-		3970204C6040465784AF311D /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/zdict.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zdict.c; path = "../Play-/deps/Dependencies/zstd/lib/dictBuilder/zdict.c"; sourceTree = "<absolute>"; };
-		3FBBBC3D6B714C58B84FD228 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v02.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.h"; sourceTree = "<absolute>"; };
-		4125700646F343B59562CC92 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = hist.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/hist.h"; sourceTree = "<absolute>"; };
-		41B73FC142DA4D518E94DB1F /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v07.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.c"; sourceTree = "<absolute>"; };
-		4359D3300FED4F918262411B /* ../Play-/deps/Dependencies/zstd/lib/common/huf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = huf.h; path = "../Play-/deps/Dependencies/zstd/lib/common/huf.h"; sourceTree = "<absolute>"; };
-		44110151A3A64183BE6E5BF3 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v04.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.c"; sourceTree = "<absolute>"; };
-		462521939C394DA8A5EA5C7C /* ../Play-/deps/Dependencies/zstd/lib/common/fse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fse.h; path = "../Play-/deps/Dependencies/zstd/lib/common/fse.h"; sourceTree = "<absolute>"; };
-		46DAEC5823C342C19253F168 /* ../Play-/deps/Dependencies/zstd/lib/common/fse_decompress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fse_decompress.c; path = "../Play-/deps/Dependencies/zstd/lib/common/fse_decompress.c"; sourceTree = "<absolute>"; };
-		47C634DBAF8342688129AF82 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = huf_decompress.c; path = "../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress.c"; sourceTree = "<absolute>"; };
-		4F0E0EC7D48349FCB615630A /* ../Play-/deps/Dependencies/zstd/lib/compress/clevels.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = clevels.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/clevels.h"; sourceTree = "<absolute>"; };
-		500FB8F37FF24FAC9E400F75 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_ldm.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.c"; sourceTree = "<absolute>"; };
-		5156F1E86F6940C7B5DB32D2 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v01.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.h"; sourceTree = "<absolute>"; };
-		5AA8AEFC3E9C47DDB545D4E5 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = threading.h; path = "../Play-/deps/Dependencies/zstd/lib/common/threading.h"; sourceTree = "<absolute>"; };
-		5B74162243C84B338D95645C /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cover.h; path = "../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.h"; sourceTree = "<absolute>"; };
-		62B5C029DBD04274BD583416 /* ../Play-/deps/Dependencies/zstd/lib/compress/huf_compress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = huf_compress.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/huf_compress.c"; sourceTree = "<absolute>"; };
-		6BCF16DA6A7A4426A0F2E575 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v07.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.h"; sourceTree = "<absolute>"; };
-		6F43CDE1945D4C2CACD914D5 /* ../Play-/deps/Dependencies/zstd/lib/common/debug.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = debug.h; path = "../Play-/deps/Dependencies/zstd/lib/common/debug.h"; sourceTree = "<absolute>"; };
-		7336B4DBADC944CAB8617D3B /* ../Play-/deps/Dependencies/zstd/lib/common/pool.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pool.c; path = "../Play-/deps/Dependencies/zstd/lib/common/pool.c"; sourceTree = "<absolute>"; };
-		73391C7E84784E058FEB80AA /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_deps.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_deps.h; path = "../Play-/deps/Dependencies/zstd/lib/common/zstd_deps.h"; sourceTree = "<absolute>"; };
-		73CCF4A3E2544145B6E50EDC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_compress_superblock.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.h"; sourceTree = "<absolute>"; };
-		77BB8690BF144074BDC7D328 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v06.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.c"; sourceTree = "<absolute>"; };
-		78C114D79C774F8D970F7565 /* ../Play-/deps/Dependencies/zstd/lib/common/pool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pool.h; path = "../Play-/deps/Dependencies/zstd/lib/common/pool.h"; sourceTree = "<absolute>"; };
-		7B6A51A63BD245598CC3E351 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_compress_literals.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.c"; sourceTree = "<absolute>"; };
-		7D6F7DFC70FA4B51A4E84F75 /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_common.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_common.c; path = "../Play-/deps/Dependencies/zstd/lib/common/zstd_common.c"; sourceTree = "<absolute>"; };
-		7EBC9831F59D449FB0674AFA /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v03.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.c"; sourceTree = "<absolute>"; };
-		86A306CD850D4AABB8E39E53 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress_amd64.S */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; fileEncoding = 4; name = huf_decompress_amd64.S; path = "../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress_amd64.S"; sourceTree = "<absolute>"; };
-		891026D63D7D4997864CC0AA /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_ddict.c; path = "../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.c"; sourceTree = "<absolute>"; };
-		89FE861D24314321B7B3D334 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstdmt_compress.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.c"; sourceTree = "<absolute>"; };
-		8B4D90A8DC5042F7B08C9DEC /* ../Play-/deps/Dependencies/zstd/lib/common/mem.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mem.h; path = "../Play-/deps/Dependencies/zstd/lib/common/mem.h"; sourceTree = "<absolute>"; };
-		8BA17B7163BB4885AC7A906A /* ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/CMakeFiles/libzstd_static.dir/Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; name = Info.plist; path = ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/CMakeFiles/libzstd_static.dir/Info.plist; sourceTree = "<absolute>"; };
-		8E3DFCFA3BCF4A77A05985B2 /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = error_private.h; path = "../Play-/deps/Dependencies/zstd/lib/common/error_private.h"; sourceTree = "<absolute>"; };
-		939968E24087419A8B1A29A8 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm_geartab.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_ldm_geartab.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm_geartab.h"; sourceTree = "<absolute>"; };
-		94E0A09A598F46D98F01C983 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v01.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.c"; sourceTree = "<absolute>"; };
-		96B81C37DD3B4F2ABD9E4A0E /* ../Play-/deps/Dependencies/zstd/build/cmake/lib/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = lib/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		9A6A07D1BE4E47DAA9F0265E /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_fast.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.h"; sourceTree = "<absolute>"; };
-		9D7A871A2A6541808EA09943 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_compress_superblock.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.c"; sourceTree = "<absolute>"; };
-		A22F452FDF4A4A3B923A4E49 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_ddict.h; path = "../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.h"; sourceTree = "<absolute>"; };
-		A7BECA6194FE4673BC209A6B /* ../Play-/deps/Dependencies/zstd/lib/common/portability_macros.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = portability_macros.h; path = "../Play-/deps/Dependencies/zstd/lib/common/portability_macros.h"; sourceTree = "<absolute>"; };
-		AAD856E0024542E3A0917F74 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_compress_sequences.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.c"; sourceTree = "<absolute>"; };
-		AE0AD652A25841FAB3261CE4 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_decompress_block.h; path = "../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.h"; sourceTree = "<absolute>"; };
-		B38EAA60EF33472DB6A04BCC /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v03.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.h"; sourceTree = "<absolute>"; };
-		B541D399F89B410F94A25B40 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v04.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.h"; sourceTree = "<absolute>"; };
-		B844B62F75C145FBBA48D34C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_lazy.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.c"; sourceTree = "<absolute>"; };
-		B8B0BAF6491F4BD49962379A /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = divsufsort.c; path = "../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.c"; sourceTree = "<absolute>"; };
-		C1552DACFA5043D78BFDDEEA /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_opt.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.c"; sourceTree = "<absolute>"; };
-		C922F147E51C48919907845D /* ../Play-/deps/Dependencies/zstd/lib/common/debug.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = debug.c; path = "../Play-/deps/Dependencies/zstd/lib/common/debug.c"; sourceTree = "<absolute>"; };
-		CD01CF32E6FC452CA338D129 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v02.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.c"; sourceTree = "<absolute>"; };
-		CD5C5605A9644787AAB0C24E /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_trace.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_trace.h; path = "../Play-/deps/Dependencies/zstd/lib/common/zstd_trace.h"; sourceTree = "<absolute>"; };
-		D10020029C954FC7BC19FA71 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = xxhash.c; path = "../Play-/deps/Dependencies/zstd/lib/common/xxhash.c"; sourceTree = "<absolute>"; };
-		D42C6FB34A72454FB45F5C58 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = hist.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/hist.c"; sourceTree = "<absolute>"; };
-		D47247BC74D2431EAA9E2B2B /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v05.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.c"; sourceTree = "<absolute>"; };
-		D824C4D134EA4793B0C73049 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_decompress_block.c; path = "../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.c"; sourceTree = "<absolute>"; };
-		DA70923140AE408CB3BD323C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_lazy.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.h"; sourceTree = "<absolute>"; };
-		DC63EA3826954511AB30A645 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_legacy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_legacy.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_legacy.h"; sourceTree = "<absolute>"; };
-		DCCBE47A4A514B1797BD91FD /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_internal.h; path = "../Play-/deps/Dependencies/zstd/lib/common/zstd_internal.h"; sourceTree = "<absolute>"; };
-		E2C2DD10C69C42118871888A /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_compress.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress.c"; sourceTree = "<absolute>"; };
-		EDF2219D4ACB4D72B2600ACE /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v05.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.h"; sourceTree = "<absolute>"; };
-		F06FCB9B26AC466E9EB77DE1 /* libzstd_static */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libzstd.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3D6795D1D46428F9A5B84CE /* ../Play-/deps/Dependencies/zstd/lib/common/bitstream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bitstream.h; path = "../Play-/deps/Dependencies/zstd/lib/common/bitstream.h"; sourceTree = "<absolute>"; };
-		F4C576FFAA8D476ABB3250F0 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_cwksp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_cwksp.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_cwksp.h"; sourceTree = "<absolute>"; };
-		F7979D014BDC471FB32C7ECA /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cover.c; path = "../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.c"; sourceTree = "<absolute>"; };
-		F7E50D584AA24345A2902C6A /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_ldm.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.h"; sourceTree = "<absolute>"; };
-		F9610DB2668547C39C5D6505 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_double_fast.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.c"; sourceTree = "<absolute>"; };
-		FA01839B967C4DE58119ED2C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_double_fast.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.h"; sourceTree = "<absolute>"; };
-		FB69D16130DE4E9FB5D65339 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_decompress_internal.h; path = "../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_internal.h"; sourceTree = "<absolute>"; };
-		FEE0954250AD4F639776798B /* ../Play-/deps/Dependencies/zstd/build/cmake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		FF7D99EEACCF4EE9822440CF /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_compress_literals.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.h"; sourceTree = "<absolute>"; };
+		0114F630BE4A4999AD50BC27 /* ../Play-/deps/Dependencies/zstd/build/cmake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		02DA1AD163CE4B288F326FE4 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_decompress_block.c; path = "../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.c"; sourceTree = "<absolute>"; };
+		0441FBC5CAB94DADB138D150 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_ddict.h; path = "../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.h"; sourceTree = "<absolute>"; };
+		07D8F80504AC41F4AFBC745F /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_lazy.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.h"; sourceTree = "<absolute>"; };
+		088AF00BC2AB4A4B901C8A1E /* ../Play-/deps/Dependencies/zstd/lib/common/pool.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = pool.c; path = "../Play-/deps/Dependencies/zstd/lib/common/pool.c"; sourceTree = "<absolute>"; };
+		0907BFA01682473A8F7EB140 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_compress_superblock.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.c"; sourceTree = "<absolute>"; };
+		0A5D871015DF428995082ED5 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cover.h; path = "../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.h"; sourceTree = "<absolute>"; };
+		0C81E2B4775143A7B69137FB /* ../Play-/deps/Dependencies/zstd/build/cmake/lib/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = lib/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0FD0BDAC1AFD4D59A15496B1 /* ../Play-/deps/Dependencies/zstd/lib/common/bits.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bits.h; path = "../Play-/deps/Dependencies/zstd/lib/common/bits.h"; sourceTree = "<absolute>"; };
+		11DAFE53F5204FA2A64383F8 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = xxhash.h; path = "../Play-/deps/Dependencies/zstd/lib/common/xxhash.h"; sourceTree = "<absolute>"; };
+		17E0B95860384428A4225AC6 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress_amd64.S */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; fileEncoding = 4; name = huf_decompress_amd64.S; path = "../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress_amd64.S"; sourceTree = "<absolute>"; };
+		1895324DA4654992A4174892 /* ../Play-/deps/Dependencies/zstd/lib/common/mem.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mem.h; path = "../Play-/deps/Dependencies/zstd/lib/common/mem.h"; sourceTree = "<absolute>"; };
+		20D7EBCAC39A42BC9614A177 /* ../Play-/deps/Dependencies/zstd/build/cmake/lib/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = lib/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		214BB38D0B5F4D8697206B96 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v04.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.h"; sourceTree = "<absolute>"; };
+		24C2A3C8CEE545D5B6332CDB /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_decompress_internal.h; path = "../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_internal.h"; sourceTree = "<absolute>"; };
+		25EF218D00824E56B815AF94 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_decompress.c; path = "../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress.c"; sourceTree = "<absolute>"; };
+		26BD2D4DBB6A4EB6905D33EE /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = error_private.c; path = "../Play-/deps/Dependencies/zstd/lib/common/error_private.c"; sourceTree = "<absolute>"; };
+		275E24CF25ED40F0AB276F91 /* ../Play-/deps/Dependencies/zstd/lib/common/debug.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = debug.c; path = "../Play-/deps/Dependencies/zstd/lib/common/debug.c"; sourceTree = "<absolute>"; };
+		2A2DE30FBA1D419F9356723D /* ../Play-/deps/Dependencies/zstd/lib/zstd.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd.h; path = "../Play-/deps/Dependencies/zstd/lib/zstd.h"; sourceTree = "<absolute>"; };
+		3084C67850DC4F0BAD47B59C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_lazy.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.c"; sourceTree = "<absolute>"; };
+		34A2DB3B97F1408BBA1B2117 /* ../Play-/deps/Dependencies/zstd/lib/common/fse_decompress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fse_decompress.c; path = "../Play-/deps/Dependencies/zstd/lib/common/fse_decompress.c"; sourceTree = "<absolute>"; };
+		34E5EB64A94A408D916C4962 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v05.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.c"; sourceTree = "<absolute>"; };
+		38042C6FA2264370889A484B /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v02.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.c"; sourceTree = "<absolute>"; };
+		39A3043A80674E679398F82B /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v07.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.h"; sourceTree = "<absolute>"; };
+		3EB1CB55EC4943B28AD429C7 /* ../Play-/deps/Dependencies/zstd/lib/compress/fse_compress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fse_compress.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/fse_compress.c"; sourceTree = "<absolute>"; };
+		3F88149C39EC4479A6370646 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = threading.h; path = "../Play-/deps/Dependencies/zstd/lib/common/threading.h"; sourceTree = "<absolute>"; };
+		4117BA38C8B341219A784581 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = hist.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/hist.c"; sourceTree = "<absolute>"; };
+		42157ED6547141C8AF1F9AB4 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_opt.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.h"; sourceTree = "<absolute>"; };
+		46475EDA55F9413FBBBDDDF5 /* ../Play-/deps/Dependencies/zstd/lib/common/bitstream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bitstream.h; path = "../Play-/deps/Dependencies/zstd/lib/common/bitstream.h"; sourceTree = "<absolute>"; };
+		467973C79BF64D16AE414D5C /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = divsufsort.h; path = "../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.h"; sourceTree = "<absolute>"; };
+		46851A6754C649949A6D7226 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm_geartab.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_ldm_geartab.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm_geartab.h"; sourceTree = "<absolute>"; };
+		49B3E74EAED04ED8BCBE7277 /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = error_private.h; path = "../Play-/deps/Dependencies/zstd/lib/common/error_private.h"; sourceTree = "<absolute>"; };
+		4ACB92FF541B469C9996C8D5 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v03.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.c"; sourceTree = "<absolute>"; };
+		4CD1B291D8294F6BA7585560 /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_trace.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_trace.h; path = "../Play-/deps/Dependencies/zstd/lib/common/zstd_trace.h"; sourceTree = "<absolute>"; };
+		5286C00E1717449B8D1E1BC9 /* ../Play-/deps/Dependencies/zstd/lib/common/fse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = fse.h; path = "../Play-/deps/Dependencies/zstd/lib/common/fse.h"; sourceTree = "<absolute>"; };
+		5795D2FA1D774F6FA8B6A1D5 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v06.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.h"; sourceTree = "<absolute>"; };
+		5BC7874420D34A7292ABA655 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_ldm.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.c"; sourceTree = "<absolute>"; };
+		5F3C8426DD034412BC34D30D /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstdmt_compress.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.c"; sourceTree = "<absolute>"; };
+		64AD7FA3E1674CCAB7302E8E /* ../Play-/deps/Dependencies/zstd/lib/common/debug.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = debug.h; path = "../Play-/deps/Dependencies/zstd/lib/common/debug.h"; sourceTree = "<absolute>"; };
+		6B4D0494C96D420B8966A247 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v01.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.c"; sourceTree = "<absolute>"; };
+		6B588F94E0E34634855CE552 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = hist.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/hist.h"; sourceTree = "<absolute>"; };
+		6F21F875C392417B8642400B /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v04.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.c"; sourceTree = "<absolute>"; };
+		6F5A9E7274444CCB93BB3665 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_legacy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_legacy.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_legacy.h"; sourceTree = "<absolute>"; };
+		6F966F86C12547FF87736CF9 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_compress_internal.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_internal.h"; sourceTree = "<absolute>"; };
+		706588B514464C2F912737E3 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/zdict.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zdict.c; path = "../Play-/deps/Dependencies/zstd/lib/dictBuilder/zdict.c"; sourceTree = "<absolute>"; };
+		7243B659FFFA4B6CBA53A64E /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = huf_decompress.c; path = "../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress.c"; sourceTree = "<absolute>"; };
+		7A0025D78A114361BCF2D1F0 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = divsufsort.c; path = "../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.c"; sourceTree = "<absolute>"; };
+		7A64011052194B508B3C8620 /* ../Play-/deps/Dependencies/zstd/lib/common/huf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = huf.h; path = "../Play-/deps/Dependencies/zstd/lib/common/huf.h"; sourceTree = "<absolute>"; };
+		7BAC5871B16C45D7ABEECFC7 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v07.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.c"; sourceTree = "<absolute>"; };
+		8F61D28C4E62400E9CC815D5 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_opt.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.c"; sourceTree = "<absolute>"; };
+		951DE603A0194F43919F18EC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_fast.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.h"; sourceTree = "<absolute>"; };
+		9786EA1841A947E9A1665ABC /* ../Play-/deps/Dependencies/zstd/lib/common/cpu.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cpu.h; path = "../Play-/deps/Dependencies/zstd/lib/common/cpu.h"; sourceTree = "<absolute>"; };
+		98D80F5CBB904646A0D71372 /* libzstd_static */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libzstd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D6DD81730234852957E6CF4 /* ../Play-/deps/Dependencies/zstd/lib/compress/clevels.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = clevels.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/clevels.h"; sourceTree = "<absolute>"; };
+		9DA1A6EA0790434EA84CF4E1 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_compress_literals.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.h"; sourceTree = "<absolute>"; };
+		9DF6FD90A04F4DD9A8FE45B8 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_ddict.c; path = "../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.c"; sourceTree = "<absolute>"; };
+		A49FD0B90D6144AD8241D70D /* ../Play-/deps/Dependencies/zstd/lib/common/entropy_common.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = entropy_common.c; path = "../Play-/deps/Dependencies/zstd/lib/common/entropy_common.c"; sourceTree = "<absolute>"; };
+		A5F816048E3542A0B8341D79 /* ../Play-/deps/Dependencies/zstd/lib/common/compiler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = compiler.h; path = "../Play-/deps/Dependencies/zstd/lib/common/compiler.h"; sourceTree = "<absolute>"; };
+		A61A42C95BF744619182FC63 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_compress.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress.c"; sourceTree = "<absolute>"; };
+		A79F5CEF66CD4843B7ED6748 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_fast.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.c"; sourceTree = "<absolute>"; };
+		A841B37E01FA4DA4B775C13E /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_compress_superblock.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.h"; sourceTree = "<absolute>"; };
+		A97F3301537C49BE8434B3B5 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = threading.c; path = "../Play-/deps/Dependencies/zstd/lib/common/threading.c"; sourceTree = "<absolute>"; };
+		A9A26DD0F43A43A2A6B9C377 /* ../Play-/deps/Dependencies/zstd/lib/compress/huf_compress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = huf_compress.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/huf_compress.c"; sourceTree = "<absolute>"; };
+		AED10285EF4A420699934697 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_double_fast.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.c"; sourceTree = "<absolute>"; };
+		B8644C1F1D9D4D7994127BFB /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/fastcover.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fastcover.c; path = "../Play-/deps/Dependencies/zstd/lib/dictBuilder/fastcover.c"; sourceTree = "<absolute>"; };
+		B9BD98EF1C1342BF9EE85F43 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstdmt_compress.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.h"; sourceTree = "<absolute>"; };
+		BEE38CEE5D7443909720D571 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v02.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.h"; sourceTree = "<absolute>"; };
+		BF56EE9283CC4A6491EA2CF7 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_double_fast.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.h"; sourceTree = "<absolute>"; };
+		C577C6BE91CE4ED98ED7C4FC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_ldm.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.h"; sourceTree = "<absolute>"; };
+		C6507B5AF697466AAC828B90 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cover.c; path = "../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.c"; sourceTree = "<absolute>"; };
+		C7DFE5176B6F4DC489AAEEDD /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_common.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_common.c; path = "../Play-/deps/Dependencies/zstd/lib/common/zstd_common.c"; sourceTree = "<absolute>"; };
+		C8400B245FD64E56B83E6569 /* ../Play-/deps/Dependencies/zstd/build/cmake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		CA7B5B3DFCA9479AB1ACF5F6 /* ../Play-/deps/Dependencies/zstd/lib/common/pool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pool.h; path = "../Play-/deps/Dependencies/zstd/lib/common/pool.h"; sourceTree = "<absolute>"; };
+		D1BC5E06DDE9448AA038E0C1 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v03.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.h"; sourceTree = "<absolute>"; };
+		DB152AF9A68344D483A06990 /* ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/CMakeFiles/libzstd_static.dir/Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; name = Info.plist; path = ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/CMakeFiles/libzstd_static.dir/Info.plist; sourceTree = "<absolute>"; };
+		E0673CD137C345868F79FCDC /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_decompress_block.h; path = "../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.h"; sourceTree = "<absolute>"; };
+		E0B10C50CBB54F7AA90C5DD0 /* ../Play-/deps/Dependencies/zstd/lib/common/portability_macros.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = portability_macros.h; path = "../Play-/deps/Dependencies/zstd/lib/common/portability_macros.h"; sourceTree = "<absolute>"; };
+		E3261227B7364EEC80FBCCA9 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v05.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.h"; sourceTree = "<absolute>"; };
+		E59D77D678754413847A30E5 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_v06.c; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.c"; sourceTree = "<absolute>"; };
+		EFD91807E62A4B7F85CE9D3C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_compress_sequences.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.h"; sourceTree = "<absolute>"; };
+		F1DEEE74869D4039A5D7941A /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_v01.h; path = "../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.h"; sourceTree = "<absolute>"; };
+		F3DAF0B15A5F4D0B8D219FA8 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_compress_sequences.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.c"; sourceTree = "<absolute>"; };
+		F48536C5FA3241EBAEF5828E /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = xxhash.c; path = "../Play-/deps/Dependencies/zstd/lib/common/xxhash.c"; sourceTree = "<absolute>"; };
+		FB4CD5140AFC481D981DDA1F /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = zstd_compress_literals.c; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.c"; sourceTree = "<absolute>"; };
+		FBB654F0D6D843E1BABF658A /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_deps.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_deps.h; path = "../Play-/deps/Dependencies/zstd/lib/common/zstd_deps.h"; sourceTree = "<absolute>"; };
+		FC7375AEEE094AF79E370083 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_cwksp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_cwksp.h; path = "../Play-/deps/Dependencies/zstd/lib/compress/zstd_cwksp.h"; sourceTree = "<absolute>"; };
+		FD76229051F84DB9BAF93493 /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = zstd_internal.h; path = "../Play-/deps/Dependencies/zstd/lib/common/zstd_internal.h"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5E7C71BF5BD4494897B3E54F /* Frameworks */ = {
+		7B80E845643C48588DF09978 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -347,204 +347,212 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		031565058486425791D2C1AE /* uninstall */ = {
+		009EBB61780640B38A301E52 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
-				A582EA28BD144512A474B824 /* CMake Rules */,
-				2914A197832F4675ADA9F2ED /* ../Play-/deps/Dependencies/zstd/build/cmake/lib/CMakeLists.txt */,
 			);
-			name = uninstall;
+			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		08390372E6F6436FA3310D52 /* Source Files */ = {
+		1F1AB0CFA9D14E2184484F87 /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-				C922F147E51C48919907845D /* ../Play-/deps/Dependencies/zstd/lib/common/debug.c */,
-				281AF70F1E6B466881508A0C /* ../Play-/deps/Dependencies/zstd/lib/common/entropy_common.c */,
-				1079B154BEF64B60AFF95AB0 /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.c */,
-				46DAEC5823C342C19253F168 /* ../Play-/deps/Dependencies/zstd/lib/common/fse_decompress.c */,
-				7336B4DBADC944CAB8617D3B /* ../Play-/deps/Dependencies/zstd/lib/common/pool.c */,
-				3731AD634E5F427C8B523C3F /* ../Play-/deps/Dependencies/zstd/lib/common/threading.c */,
-				D10020029C954FC7BC19FA71 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.c */,
-				7D6F7DFC70FA4B51A4E84F75 /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_common.c */,
-				26DB333EEBCB4CB8B7BCFBCB /* ../Play-/deps/Dependencies/zstd/lib/compress/fse_compress.c */,
-				D42C6FB34A72454FB45F5C58 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.c */,
-				62B5C029DBD04274BD583416 /* ../Play-/deps/Dependencies/zstd/lib/compress/huf_compress.c */,
-				E2C2DD10C69C42118871888A /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress.c */,
-				7B6A51A63BD245598CC3E351 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.c */,
-				AAD856E0024542E3A0917F74 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.c */,
-				9D7A871A2A6541808EA09943 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.c */,
-				F9610DB2668547C39C5D6505 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.c */,
-				0E7A248B4E3E4E53ADAA65CC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.c */,
-				B844B62F75C145FBBA48D34C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.c */,
-				500FB8F37FF24FAC9E400F75 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.c */,
-				C1552DACFA5043D78BFDDEEA /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.c */,
-				89FE861D24314321B7B3D334 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.c */,
-				47C634DBAF8342688129AF82 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress.c */,
-				891026D63D7D4997864CC0AA /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.c */,
-				3218CA7314014A8D8ED6B2F3 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress.c */,
-				D824C4D134EA4793B0C73049 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.c */,
-				F7979D014BDC471FB32C7ECA /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.c */,
-				B8B0BAF6491F4BD49962379A /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.c */,
-				1A381938E23C4BB1AAEE6BCE /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/fastcover.c */,
-				3970204C6040465784AF311D /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/zdict.c */,
-				94E0A09A598F46D98F01C983 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.c */,
-				CD01CF32E6FC452CA338D129 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.c */,
-				7EBC9831F59D449FB0674AFA /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.c */,
-				44110151A3A64183BE6E5BF3 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.c */,
-				D47247BC74D2431EAA9E2B2B /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.c */,
-				77BB8690BF144074BDC7D328 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.c */,
-				41B73FC142DA4D518E94DB1F /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.c */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		51448FA1546343B49E686109 /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				07C772E6D04443F28CF5365F /* ../Play-/deps/Dependencies/zstd/lib/common/bits.h */,
-				F3D6795D1D46428F9A5B84CE /* ../Play-/deps/Dependencies/zstd/lib/common/bitstream.h */,
-				2EC4D8D91D9048EBB1BE746F /* ../Play-/deps/Dependencies/zstd/lib/common/compiler.h */,
-				0C1910655655443193248B06 /* ../Play-/deps/Dependencies/zstd/lib/common/cpu.h */,
-				6F43CDE1945D4C2CACD914D5 /* ../Play-/deps/Dependencies/zstd/lib/common/debug.h */,
-				8E3DFCFA3BCF4A77A05985B2 /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.h */,
-				462521939C394DA8A5EA5C7C /* ../Play-/deps/Dependencies/zstd/lib/common/fse.h */,
-				4359D3300FED4F918262411B /* ../Play-/deps/Dependencies/zstd/lib/common/huf.h */,
-				8B4D90A8DC5042F7B08C9DEC /* ../Play-/deps/Dependencies/zstd/lib/common/mem.h */,
-				78C114D79C774F8D970F7565 /* ../Play-/deps/Dependencies/zstd/lib/common/pool.h */,
-				A7BECA6194FE4673BC209A6B /* ../Play-/deps/Dependencies/zstd/lib/common/portability_macros.h */,
-				5AA8AEFC3E9C47DDB545D4E5 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.h */,
-				23BB0CE1CC30475EBB4DA782 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.h */,
-				73391C7E84784E058FEB80AA /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_deps.h */,
-				DCCBE47A4A514B1797BD91FD /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_internal.h */,
-				CD5C5605A9644787AAB0C24E /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_trace.h */,
-				4F0E0EC7D48349FCB615630A /* ../Play-/deps/Dependencies/zstd/lib/compress/clevels.h */,
-				4125700646F343B59562CC92 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.h */,
-				118BD7C5151243B089D8F98A /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_internal.h */,
-				FF7D99EEACCF4EE9822440CF /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.h */,
-				2792269B7DC247F5B3621447 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.h */,
-				73CCF4A3E2544145B6E50EDC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.h */,
-				F4C576FFAA8D476ABB3250F0 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_cwksp.h */,
-				FA01839B967C4DE58119ED2C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.h */,
-				9A6A07D1BE4E47DAA9F0265E /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.h */,
-				DA70923140AE408CB3BD323C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.h */,
-				F7E50D584AA24345A2902C6A /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.h */,
-				939968E24087419A8B1A29A8 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm_geartab.h */,
-				19A482C1EBDA48479DA03838 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.h */,
-				1D92624DF37440389930B18C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.h */,
-				A22F452FDF4A4A3B923A4E49 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.h */,
-				AE0AD652A25841FAB3261CE4 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.h */,
-				FB69D16130DE4E9FB5D65339 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_internal.h */,
-				5B74162243C84B338D95645C /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.h */,
-				33CF1916C36F4992A3AEABFC /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.h */,
-				DC63EA3826954511AB30A645 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_legacy.h */,
-				5156F1E86F6940C7B5DB32D2 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.h */,
-				3FBBBC3D6B714C58B84FD228 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.h */,
-				B38EAA60EF33472DB6A04BCC /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.h */,
-				B541D399F89B410F94A25B40 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.h */,
-				EDF2219D4ACB4D72B2600ACE /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.h */,
-				36D52A53468341EFAB239B87 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.h */,
-				6BCF16DA6A7A4426A0F2E575 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.h */,
-				0088D7B865A941748743A503 /* ../Play-/deps/Dependencies/zstd/lib/zstd.h */,
+				0FD0BDAC1AFD4D59A15496B1 /* ../Play-/deps/Dependencies/zstd/lib/common/bits.h */,
+				46475EDA55F9413FBBBDDDF5 /* ../Play-/deps/Dependencies/zstd/lib/common/bitstream.h */,
+				A5F816048E3542A0B8341D79 /* ../Play-/deps/Dependencies/zstd/lib/common/compiler.h */,
+				9786EA1841A947E9A1665ABC /* ../Play-/deps/Dependencies/zstd/lib/common/cpu.h */,
+				64AD7FA3E1674CCAB7302E8E /* ../Play-/deps/Dependencies/zstd/lib/common/debug.h */,
+				49B3E74EAED04ED8BCBE7277 /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.h */,
+				5286C00E1717449B8D1E1BC9 /* ../Play-/deps/Dependencies/zstd/lib/common/fse.h */,
+				7A64011052194B508B3C8620 /* ../Play-/deps/Dependencies/zstd/lib/common/huf.h */,
+				1895324DA4654992A4174892 /* ../Play-/deps/Dependencies/zstd/lib/common/mem.h */,
+				CA7B5B3DFCA9479AB1ACF5F6 /* ../Play-/deps/Dependencies/zstd/lib/common/pool.h */,
+				E0B10C50CBB54F7AA90C5DD0 /* ../Play-/deps/Dependencies/zstd/lib/common/portability_macros.h */,
+				3F88149C39EC4479A6370646 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.h */,
+				11DAFE53F5204FA2A64383F8 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.h */,
+				FBB654F0D6D843E1BABF658A /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_deps.h */,
+				FD76229051F84DB9BAF93493 /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_internal.h */,
+				4CD1B291D8294F6BA7585560 /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_trace.h */,
+				9D6DD81730234852957E6CF4 /* ../Play-/deps/Dependencies/zstd/lib/compress/clevels.h */,
+				6B588F94E0E34634855CE552 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.h */,
+				6F966F86C12547FF87736CF9 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_internal.h */,
+				9DA1A6EA0790434EA84CF4E1 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.h */,
+				EFD91807E62A4B7F85CE9D3C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.h */,
+				A841B37E01FA4DA4B775C13E /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.h */,
+				FC7375AEEE094AF79E370083 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_cwksp.h */,
+				BF56EE9283CC4A6491EA2CF7 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.h */,
+				951DE603A0194F43919F18EC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.h */,
+				07D8F80504AC41F4AFBC745F /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.h */,
+				C577C6BE91CE4ED98ED7C4FC /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.h */,
+				46851A6754C649949A6D7226 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm_geartab.h */,
+				42157ED6547141C8AF1F9AB4 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.h */,
+				B9BD98EF1C1342BF9EE85F43 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.h */,
+				0441FBC5CAB94DADB138D150 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.h */,
+				E0673CD137C345868F79FCDC /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.h */,
+				24C2A3C8CEE545D5B6332CDB /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_internal.h */,
+				0A5D871015DF428995082ED5 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.h */,
+				467973C79BF64D16AE414D5C /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.h */,
+				6F5A9E7274444CCB93BB3665 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_legacy.h */,
+				F1DEEE74869D4039A5D7941A /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.h */,
+				BEE38CEE5D7443909720D571 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.h */,
+				D1BC5E06DDE9448AA038E0C1 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.h */,
+				214BB38D0B5F4D8697206B96 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.h */,
+				E3261227B7364EEC80FBCCA9 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.h */,
+				5795D2FA1D774F6FA8B6A1D5 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.h */,
+				39A3043A80674E679398F82B /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.h */,
+				2A2DE30FBA1D419F9356723D /* ../Play-/deps/Dependencies/zstd/lib/zstd.h */,
 			);
 			name = "Header Files";
 			sourceTree = "<group>";
 		};
-		7BCE9BAF6ED44316897E4A7B /* CMake Rules */ = {
+		28D0AB47A1E5428DA31223A2 /* uninstall */ = {
+			isa = PBXGroup;
+			children = (
+				5A14BB9CAAD8448EB192A9A7 /* CMake Rules */,
+				0C81E2B4775143A7B69137FB /* ../Play-/deps/Dependencies/zstd/build/cmake/lib/CMakeLists.txt */,
+			);
+			name = uninstall;
+			sourceTree = "<group>";
+		};
+		5A14BB9CAAD8448EB192A9A7 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		8268929BA9E54F47B3437ED8 /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		A0D30F0FDBA1496BB9E2603A /* libzstd_static */ = {
-			isa = PBXGroup;
-			children = (
-				08390372E6F6436FA3310D52 /* Source Files */,
-				51448FA1546343B49E686109 /* Header Files */,
-				E7A77A7F07BC4FC785DE77F2 /* Resources */,
-				96B81C37DD3B4F2ABD9E4A0E /* ../Play-/deps/Dependencies/zstd/build/cmake/lib/CMakeLists.txt */,
-				86A306CD850D4AABB8E39E53 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress_amd64.S */,
-			);
-			name = libzstd_static;
-			sourceTree = "<group>";
-		};
-		A2C3AA5391134BCDBEC97C61 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F06FCB9B26AC466E9EB77DE1 /* libzstd_static */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A582EA28BD144512A474B824 /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		BB4864AD5589484BB7A82007 /* Frameworks */ = {
+		6104E6A3075643E2B0A85BD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BFB27A8C43C646FA85760020 = {
+		8F00EEBE335E43E2AA4B7055 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F29B6A7B8FF64C5B99FEA897 /* clean-all */,
-				F836FE388BCC4B9EA3678E86 /* ALL_BUILD */,
-				A0D30F0FDBA1496BB9E2603A /* libzstd_static */,
-				031565058486425791D2C1AE /* uninstall */,
-				A2C3AA5391134BCDBEC97C61 /* Products */,
-				BB4864AD5589484BB7A82007 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		E7A77A7F07BC4FC785DE77F2 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8BA17B7163BB4885AC7A906A /* ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/CMakeFiles/libzstd_static.dir/Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		F29B6A7B8FF64C5B99FEA897 /* clean-all */ = {
+		982BD691663E4939BDAE9520 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
-				7BCE9BAF6ED44316897E4A7B /* CMake Rules */,
-				FEE0954250AD4F639776798B /* ../Play-/deps/Dependencies/zstd/build/cmake/CMakeLists.txt */,
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		A0AA5C1F713643B09E43046F /* clean-all */ = {
+			isa = PBXGroup;
+			children = (
+				982BD691663E4939BDAE9520 /* CMake Rules */,
+				0114F630BE4A4999AD50BC27 /* ../Play-/deps/Dependencies/zstd/build/cmake/CMakeLists.txt */,
 			);
 			name = "clean-all";
 			sourceTree = "<group>";
 		};
-		F836FE388BCC4B9EA3678E86 /* ALL_BUILD */ = {
+		BFB0FD1B4C5D4310A27D6235 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				8268929BA9E54F47B3437ED8 /* CMake Rules */,
-				243DCC9581FC42E784F6954D /* ../Play-/deps/Dependencies/zstd/build/cmake/CMakeLists.txt */,
+				275E24CF25ED40F0AB276F91 /* ../Play-/deps/Dependencies/zstd/lib/common/debug.c */,
+				A49FD0B90D6144AD8241D70D /* ../Play-/deps/Dependencies/zstd/lib/common/entropy_common.c */,
+				26BD2D4DBB6A4EB6905D33EE /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.c */,
+				34A2DB3B97F1408BBA1B2117 /* ../Play-/deps/Dependencies/zstd/lib/common/fse_decompress.c */,
+				088AF00BC2AB4A4B901C8A1E /* ../Play-/deps/Dependencies/zstd/lib/common/pool.c */,
+				A97F3301537C49BE8434B3B5 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.c */,
+				F48536C5FA3241EBAEF5828E /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.c */,
+				C7DFE5176B6F4DC489AAEEDD /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_common.c */,
+				3EB1CB55EC4943B28AD429C7 /* ../Play-/deps/Dependencies/zstd/lib/compress/fse_compress.c */,
+				4117BA38C8B341219A784581 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.c */,
+				A9A26DD0F43A43A2A6B9C377 /* ../Play-/deps/Dependencies/zstd/lib/compress/huf_compress.c */,
+				A61A42C95BF744619182FC63 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress.c */,
+				FB4CD5140AFC481D981DDA1F /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.c */,
+				F3DAF0B15A5F4D0B8D219FA8 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.c */,
+				0907BFA01682473A8F7EB140 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.c */,
+				AED10285EF4A420699934697 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.c */,
+				A79F5CEF66CD4843B7ED6748 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.c */,
+				3084C67850DC4F0BAD47B59C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.c */,
+				5BC7874420D34A7292ABA655 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.c */,
+				8F61D28C4E62400E9CC815D5 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.c */,
+				5F3C8426DD034412BC34D30D /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.c */,
+				7243B659FFFA4B6CBA53A64E /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress.c */,
+				9DF6FD90A04F4DD9A8FE45B8 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.c */,
+				25EF218D00824E56B815AF94 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress.c */,
+				02DA1AD163CE4B288F326FE4 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.c */,
+				C6507B5AF697466AAC828B90 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.c */,
+				7A0025D78A114361BCF2D1F0 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.c */,
+				B8644C1F1D9D4D7994127BFB /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/fastcover.c */,
+				706588B514464C2F912737E3 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/zdict.c */,
+				6B4D0494C96D420B8966A247 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.c */,
+				38042C6FA2264370889A484B /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.c */,
+				4ACB92FF541B469C9996C8D5 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.c */,
+				6F21F875C392417B8642400B /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.c */,
+				34E5EB64A94A408D916C4962 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.c */,
+				E59D77D678754413847A30E5 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.c */,
+				7BAC5871B16C45D7ABEECFC7 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		E4CDB51A250346BE950BBDCE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB152AF9A68344D483A06990 /* ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/CMakeFiles/libzstd_static.dir/Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E6683C4E7BEE4ED1A8009476 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				009EBB61780640B38A301E52 /* CMake Rules */,
+				C8400B245FD64E56B83E6569 /* ../Play-/deps/Dependencies/zstd/build/cmake/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		F5AD6AEDF31A43B9A4760725 = {
+			isa = PBXGroup;
+			children = (
+				A0AA5C1F713643B09E43046F /* clean-all */,
+				E6683C4E7BEE4ED1A8009476 /* ALL_BUILD */,
+				FCD12D9AD10642F9B373D61F /* libzstd_static */,
+				28D0AB47A1E5428DA31223A2 /* uninstall */,
+				F8BA52A7897946209D150171 /* Products */,
+				6104E6A3075643E2B0A85BD1 /* Frameworks */,
+				8F00EEBE335E43E2AA4B7055 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		F8BA52A7897946209D150171 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98D80F5CBB904646A0D71372 /* libzstd_static */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCD12D9AD10642F9B373D61F /* libzstd_static */ = {
+			isa = PBXGroup;
+			children = (
+				BFB0FD1B4C5D4310A27D6235 /* Source Files */,
+				1F1AB0CFA9D14E2184484F87 /* Header Files */,
+				E4CDB51A250346BE950BBDCE /* Resources */,
+				20D7EBCAC39A42BC9614A177 /* ../Play-/deps/Dependencies/zstd/build/cmake/lib/CMakeLists.txt */,
+				17E0B95860384428A4225AC6 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress_amd64.S */,
+			);
+			name = libzstd_static;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D72824E600034786A2A9F513 /* libzstd_static */ = {
+		29109A4C926E409898D7C057 /* libzstd_static */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 565066DA8FCF4CB19FE95252 /* Build configuration list for PBXNativeTarget "libzstd_static" */;
+			buildConfigurationList = 7C7F8F3996EF4533A90F0DB3 /* Build configuration list for PBXNativeTarget "libzstd_static" */;
 			buildPhases = (
-				4F5B48BA5C974553A715B2B8 /* Sources */,
-				5E7C71BF5BD4494897B3E54F /* Frameworks */,
+				1A3D4F7DE5C7469D83A67972 /* Sources */,
+				7B80E845643C48588DF09978 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -552,41 +560,41 @@
 			);
 			name = libzstd_static;
 			productName = libzstd_static;
-			productReference = F06FCB9B26AC466E9EB77DE1 /* libzstd_static */;
+			productReference = 98D80F5CBB904646A0D71372 /* libzstd_static */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2FA64775A0044CD3A5BE7C05 /* Project object */ = {
+		FE71BB3CEE234B82A5251D6D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1530;
 			};
-			buildConfigurationList = 7B0AC53183D94AD08BF4CCD0 /* Build configuration list for PBXProject "zstd" */;
+			buildConfigurationList = 2EE6B0E9FEBE45B1BB2930C0 /* Build configuration list for PBXProject "zstd" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				70948BF3BC7F484E98030B24 /* Debug */,
-				160EA60AFC0E4F6B90E40CC1 /* Release */,
-				51961E3E8DF3441093F16D66 /* MinSizeRel */,
-				C727A1088A47472EA859E078 /* RelWithDebInfo */,
+				C189E685901042DBA3478029 /* Debug */,
+				E00DF29BEB7042A4BE9BC302 /* Release */,
+				47E6C72862E44FEF87AADCA2 /* MinSizeRel */,
+				37F785A0D18F4FEC86B97A94 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = BFB27A8C43C646FA85760020;
+			mainGroup = F5AD6AEDF31A43B9A4760725;
 			projectDirPath = "../Play-";
 			projectRoot = "";
 			targets = (
-				813B9411ED6148CBBF6FDF45 /* ALL_BUILD */,
-				B7CC82741C444EE0A7828070 /* RUN_TESTS */,
-				81A7140D8C2040F2ACDF825B /* ZERO_CHECK */,
-				D664C27D341945F3B8917920 /* clean-all */,
-				0C166A68102548AEB1781C34 /* install */,
-				D72824E600034786A2A9F513 /* libzstd_static */,
-				D771A2D4BE7846D7BB9D5A72 /* package */,
-				120E8B02EEEE4188AFB4ABED /* uninstall */,
+				83967F7FD1F545B5A3A7BD95 /* ALL_BUILD */,
+				1F81D8D78115457AA9FB1277 /* RUN_TESTS */,
+				7D5675DB9FF34C648823A625 /* ZERO_CHECK */,
+				B7FEFEADAEA34DB1A461F81E /* clean-all */,
+				95D05D9E0A9845938A35677A /* install */,
+				29109A4C926E409898D7C057 /* libzstd_static */,
+				3CE69EB366EF41009E321A46 /* package */,
+				878A0B6654974505BC602C51 /* uninstall */,
 			);
 		};
 /* End PBXProject section */
@@ -606,19 +614,19 @@
 			shellScript = "set -e
 if test \"$CONFIGURATION\" = \"Debug\"; then :
   cd ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/ctest --force-new-ctest-process -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/ctest --force-new-ctest-process -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
 fi
 if test \"$CONFIGURATION\" = \"Release\"; then :
   cd ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/ctest --force-new-ctest-process -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/ctest --force-new-ctest-process -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
 fi
 if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
   cd ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/ctest --force-new-ctest-process -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/ctest --force-new-ctest-process -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
 fi
 if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
   cd ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/ctest --force-new-ctest-process -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/ctest --force-new-ctest-process -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME
 fi
 ";
 			showEnvVarsInLog = 0;
@@ -639,19 +647,19 @@ fi
 			shellScript = "set -e
 if test \"$CONFIGURATION\" = \"Debug\"; then :
   cd ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/cmake_uninstall.cmake
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -P ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/cmake_uninstall.cmake
 fi
 if test \"$CONFIGURATION\" = \"Release\"; then :
   cd ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/cmake_uninstall.cmake
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -P ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/cmake_uninstall.cmake
 fi
 if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
   cd ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/cmake_uninstall.cmake
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -P ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/cmake_uninstall.cmake
 fi
 if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
   cd ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -P ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/cmake_uninstall.cmake
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -P ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib/cmake_uninstall.cmake
 fi
 ";
 			showEnvVarsInLog = 0;
@@ -700,19 +708,19 @@ exit 0";
 			shellScript = "set -e
 if test \"$CONFIGURATION\" = \"Debug\"; then :
   cd ../cmake
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/cpack -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME --config ./CPackConfig.cmake
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/cpack -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME --config ./CPackConfig.cmake
 fi
 if test \"$CONFIGURATION\" = \"Release\"; then :
   cd ../cmake
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/cpack -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME --config ./CPackConfig.cmake
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/cpack -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME --config ./CPackConfig.cmake
 fi
 if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
   cd ../cmake
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/cpack -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME --config ./CPackConfig.cmake
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/cpack -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME --config ./CPackConfig.cmake
 fi
 if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
   cd ../cmake
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/cpack -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME --config ./CPackConfig.cmake
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/cpack -C $CONFIGURATION$EFFECTIVE_PLATFORM_NAME --config ./CPackConfig.cmake
 fi
 ";
 			showEnvVarsInLog = 0;
@@ -776,19 +784,19 @@ exit 0";
 			shellScript = "set -e
 if test \"$CONFIGURATION\" = \"Debug\"; then :
   cd ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
 fi
 if test \"$CONFIGURATION\" = \"Release\"; then :
   cd ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
 fi
 if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
   cd ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
 fi
 if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
   cd ../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd
-  /opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+  /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
 fi
 ";
 			showEnvVarsInLog = 0;
@@ -929,101 +937,165 @@ fi
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F5B48BA5C974553A715B2B8 /* Sources */ = {
+		1A3D4F7DE5C7469D83A67972 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FB76D6737674F39B56BB1E6 /* ../Play-/deps/Dependencies/zstd/lib/common/debug.c */,
-				D4D10FF3DF5147D58EA78115 /* ../Play-/deps/Dependencies/zstd/lib/common/entropy_common.c */,
-				4F879BF000D04EB08B1F9E28 /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.c */,
-				E6BA0200898049218B92B6BC /* ../Play-/deps/Dependencies/zstd/lib/common/fse_decompress.c */,
-				2A640483C6634013B2CA54F0 /* ../Play-/deps/Dependencies/zstd/lib/common/pool.c */,
-				9713B4D87A1243A8900193A5 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.c */,
-				69C1751CCF8142E598A482AC /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.c */,
-				949B5702FF9444F390BD2C8C /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_common.c */,
-				431C58B99E5A404290C2EA54 /* ../Play-/deps/Dependencies/zstd/lib/compress/fse_compress.c */,
-				1B564AF2D06B471087CFD4CF /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.c */,
-				7CB32AAA0C0D426FB1EE9F50 /* ../Play-/deps/Dependencies/zstd/lib/compress/huf_compress.c */,
-				AA907F620A964D88B6415024 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress.c */,
-				767CE491A2ED440093E3A86C /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.c */,
-				9D3448CAC67E4AB7A3BD46EA /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.c */,
-				F1EF3750A94141FA9E97FB16 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.c */,
-				7A645861A93D489D915A16D1 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.c */,
-				D19765C1116B4CB38BFE7388 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.c */,
-				0370A7D60F604DBAA0489AD0 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.c */,
-				10AE5CCF6D5646B1B58E6C50 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.c */,
-				76828916318E48FF85ED33C5 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.c */,
-				1361A58109A041A5B2C99CD3 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.c */,
-				49E22F4DAC5A40D68201A89C /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress.c */,
-				5525B917B8C44A7290818F69 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress_amd64.S */,
-				E825E104E8E54287978DF533 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.c */,
-				1C15D8FF65424F6ABC60F7E7 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress.c */,
-				506E721C5ECE4D02B2CE2F9B /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.c */,
-				C9B3E8A5F62A4FC7875D552B /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.c */,
-				12DFE9BBC5FB4536BEB5630B /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.c */,
-				CD4F36D9519E4283BBAFDB75 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/fastcover.c */,
-				94E952D52B5D40478492448E /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/zdict.c */,
-				CDABFF589C2B40D48151E6A9 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.c */,
-				2E21562CF63F4CEF88002ABF /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.c */,
-				A7270535CA4C4F7384C2520A /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.c */,
-				F0ABE67A8BCA4343A2D74C06 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.c */,
-				67009BD8A6D64F5494CE28C2 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.c */,
-				6B7BF7B507F54A0A81E36874 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.c */,
-				A86D6030B1E947DC8D8E0F39 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.c */,
+				73B29D0AF22C431AAB4F1EDA /* ../Play-/deps/Dependencies/zstd/lib/common/debug.c */,
+				7F3FFCE0B3DE466E9CDF09AF /* ../Play-/deps/Dependencies/zstd/lib/common/entropy_common.c */,
+				1DE648C3845043C59773049E /* ../Play-/deps/Dependencies/zstd/lib/common/error_private.c */,
+				6063CA10B4214262AC194BA3 /* ../Play-/deps/Dependencies/zstd/lib/common/fse_decompress.c */,
+				7A2378E35C394D149446B6B4 /* ../Play-/deps/Dependencies/zstd/lib/common/pool.c */,
+				8F940CA2E03C430CAF77C508 /* ../Play-/deps/Dependencies/zstd/lib/common/threading.c */,
+				D01237DB2F254905AA0CF4E4 /* ../Play-/deps/Dependencies/zstd/lib/common/xxhash.c */,
+				B1C5A54F2AED44278501B60B /* ../Play-/deps/Dependencies/zstd/lib/common/zstd_common.c */,
+				B0B00F0DDDFF470BA9C78A23 /* ../Play-/deps/Dependencies/zstd/lib/compress/fse_compress.c */,
+				880C320226E149EEAED2D310 /* ../Play-/deps/Dependencies/zstd/lib/compress/hist.c */,
+				FC50EAFA37634C1AB56C9A86 /* ../Play-/deps/Dependencies/zstd/lib/compress/huf_compress.c */,
+				1AD9929B1FD444C390492E01 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress.c */,
+				4C53F472778F4183A55F0E9E /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_literals.c */,
+				A7B0A22CF58F4F7B97E76A96 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_sequences.c */,
+				4072C409C8FC425DBFC64890 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_compress_superblock.c */,
+				263ACDAD85044F3A91B806FF /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_double_fast.c */,
+				383071078725491280A19833 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_fast.c */,
+				F0833EDECEF94E76A7677256 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_lazy.c */,
+				F9081C55B44040A3A8B8B054 /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_ldm.c */,
+				8F64500C7F6247AA8FF05D5B /* ../Play-/deps/Dependencies/zstd/lib/compress/zstd_opt.c */,
+				237A4B11D34B4C06A8069C4D /* ../Play-/deps/Dependencies/zstd/lib/compress/zstdmt_compress.c */,
+				7893D81075C54941B79C6DE0 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress.c */,
+				C3384A8AF9FA4989ACB13017 /* ../Play-/deps/Dependencies/zstd/lib/decompress/huf_decompress_amd64.S */,
+				A38DF342A54D4ADBA9EF27AF /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_ddict.c */,
+				98A2FCDB64074EE3851E1B1F /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress.c */,
+				28FD02C9F2004C9C95765CC7 /* ../Play-/deps/Dependencies/zstd/lib/decompress/zstd_decompress_block.c */,
+				432DC2B7CD3545C881DE28B0 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/cover.c */,
+				2A0CEE99D306480D88BE99E6 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/divsufsort.c */,
+				688558A54C454CDF8F3E4C90 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/fastcover.c */,
+				2E7CA9293A284B608F746AB7 /* ../Play-/deps/Dependencies/zstd/lib/dictBuilder/zdict.c */,
+				47A1F669F9544EE5847ABD99 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v01.c */,
+				519C01A8D08247A8AD7AC98F /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v02.c */,
+				14D075170E284BFB81A91B3A /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v03.c */,
+				2155EB4D89ED4F098C54AFCB /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v04.c */,
+				3B23B0B20FED4044BDB450EF /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v05.c */,
+				50127AC90D8B4D0FB328EB03 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v06.c */,
+				8D80DE4B9BB04813B428A845 /* ../Play-/deps/Dependencies/zstd/lib/legacy/zstd_v07.c */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0C7F143CA7A74115A3CB26C0 /* PBXTargetDependency */ = {
+		27A34068C51F47359B91062E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 813B9411ED6148CBBF6FDF45 /* ALL_BUILD */;
-			targetProxy = C5AC9FEFCA1F4F649DDB6A13 /* PBXContainerItemProxy */;
+			target = 7D5675DB9FF34C648823A625 /* ZERO_CHECK */;
+			targetProxy = 4CC60A16478A4F01AFC2192F /* PBXContainerItemProxy */;
 		};
-		3BCC2C27C68C4D1FAC56E407 /* PBXTargetDependency */ = {
+		6CBDD570FD6249C68DBD269B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D72824E600034786A2A9F513 /* libzstd_static */;
-			targetProxy = 36436EF615FB42C2AFB068C3 /* PBXContainerItemProxy */;
+			target = 7D5675DB9FF34C648823A625 /* ZERO_CHECK */;
+			targetProxy = FE81118326094E40A0E4F0BF /* PBXContainerItemProxy */;
 		};
-		48A93C67556549CBB86CE1B4 /* PBXTargetDependency */ = {
+		74DBC55824424075BD766FCA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 81A7140D8C2040F2ACDF825B /* ZERO_CHECK */;
-			targetProxy = 418E3D72C8D9491B8AD3EB56 /* PBXContainerItemProxy */;
+			target = 83967F7FD1F545B5A3A7BD95 /* ALL_BUILD */;
+			targetProxy = E675399B3C3C45EB9EE36CC0 /* PBXContainerItemProxy */;
 		};
-		87CBB4EC61CF4F358FC5AF2A /* PBXTargetDependency */ = {
+		CA396CB2F1094EE189EB8064 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 81A7140D8C2040F2ACDF825B /* ZERO_CHECK */;
-			targetProxy = BA6081D000AF43D891A99BFE /* PBXContainerItemProxy */;
+			target = 29109A4C926E409898D7C057 /* libzstd_static */;
+			targetProxy = ED32F89B404B4EF98C615BF2 /* PBXContainerItemProxy */;
 		};
-		E029E2C51DEE453EB788698C /* PBXTargetDependency */ = {
+		D835C222100A4419862FEDCE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 813B9411ED6148CBBF6FDF45 /* ALL_BUILD */;
-			targetProxy = E3F4547671DC4532B9821F0F /* PBXContainerItemProxy */;
+			target = 83967F7FD1F545B5A3A7BD95 /* ALL_BUILD */;
+			targetProxy = 1E26DEADDD0047E484679FF1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		01B9D976227343B58D0F5DF9 /* MinSizeRel */ = {
+		0BABE8FA1D724F5D8537962B /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = arm64;
-				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				CODE_SIGN_IDENTITY = "";
-				DEVELOPMENT_TEAM = XXXXXXXXXX;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				PROVISIONING_PROFILE_SPECIFIER = "iOS Team Provisioning Profile: *";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
-				BUILD_DIR = ../lib;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		230C87501CC5425DB6ED4B6F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = MinSizeRel;
 		};
-		04181301EF454FC1ABFED2DB /* Release */ = {
+		27064BA8599C4D878BCA8880 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		2E2CAEA7867F4129B1AEC383 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "clean-all";
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2E81C4F500504AB5A359C099 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1040,26 +1112,30 @@ fi
 			};
 			name = Release;
 		};
-		06CA12FA0EE542908B68A278 /* Debug */ = {
+		2ED0CB70FECE4A4C82E72500 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = arm64;
-				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				CODE_SIGN_IDENTITY = "";
-				DEVELOPMENT_TEAM = XXXXXXXXXX;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				PROVISIONING_PROFILE_SPECIFIER = "iOS Team Provisioning Profile: *";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
-				BUILD_DIR = ../lib;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Debug;
+			name = MinSizeRel;
 		};
-		09AD9484E911457199121FD9 /* Release */ = {
+		3C64AC5C72CF4EA5B8C484FC /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1074,39 +1150,110 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Release;
+			name = RelWithDebInfo;
 		};
-		0F37D3EDF91340959AE16AC4 /* RelWithDebInfo */ = {
+		461FA859DA14438BA9AA9556 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = arm64;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",ZSTD_MULTITHREAD,"'PLAY_VERSION=\"0.30\"'","'XXH_NAMESPACE=ZSTD_'","'ZSTD_LEGACY_SUPPORT=5'","$(inherited)");
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib,"../Play-/deps/Dependencies/zstd/build/cmake/lib","../Play-/deps/Dependencies/zstd/build/cmake/../../lib","../Play-/deps/Dependencies/zstd/build/cmake/../../lib/common","../Play-/deps/Dependencies/zstd/build/cmake/../../lib/legacy","$(inherited)");
 				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = (" -mios-version-min=12.2 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes        -DNDEBUG -fPIC ","$(inherited)");
-				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_LDFLAGS = ("","$(inherited)");
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = zstd;
+				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = RelWithDebInfo;
+			name = Debug;
 		};
-		18964797AB734D3ABAC17CC8 /* Release */ = {
+		4884E636D3914960937B7AC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		5D28B5CE9182480A93E5835A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "clean-all";
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		603D3293CBEC43B7A6A42B04 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		639870B8B800458DA183C90F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = XXXXXXXXXX;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Team Provisioning Profile: *";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 4.0;
+				BUILD_DIR = ../lib;
+			};
+			name = MinSizeRel;
+		};
+		6BBC98CB545344E78251136C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1123,9 +1270,108 @@ fi
 			};
 			name = Release;
 		};
-		198BB6C1498344859EAF2141 /* Debug */ = {
+		6F0E1C064C6747D5B6CC2C9E /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		78C013B0F5D241C58E0CB6FD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = XXXXXXXXXX;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Team Provisioning Profile: *";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 4.0;
+				BUILD_DIR = ../lib;
+			};
+			name = RelWithDebInfo;
+		};
+		791564C215094AAE843A8909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		7DD6AEC85A894AF2A886AD38 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7E96B228878347FBA3855AB5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		8240A488A0AD4B28B0E71B2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
 				
@@ -1151,47 +1397,10 @@ fi
 			};
 			name = Debug;
 		};
-		1BA34F557B0C41618E13A72E /* RelWithDebInfo */ = {
+		8562C4588930403280F4AF00 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		1BEEC7C5EFFD45CEBC5F25EC /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = RUN_TESTS;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		338B31A6C5FF4F1E82477858 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1206,11 +1415,216 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Release;
+			name = RelWithDebInfo;
 		};
-		377ED878F4614A878B61E33E /* Release */ = {
+		89395990B6EF4B1099B28A90 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		9B08DE7F5471468FAB6A7F21 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		9E1AA4C8A6534E029F38DA51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		9E3F7F0D17904E1D9E5CE757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		A8C8237F7E5348B7B8C70C5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "clean-all";
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		BA21B874BA8942AD8007FA6E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CDF3BDAC90BB44CFA6117B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		CE67DA0EDCA6401293BD9A1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = XXXXXXXXXX;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Team Provisioning Profile: *";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				BUILD_DIR = ../lib;
+			};
+			name = Debug;
+		};
+		CF29809472274F8D94132B9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = XXXXXXXXXX;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				PROVISIONING_PROFILE_SPECIFIER = "iOS Team Provisioning Profile: *";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 4.0;
+				BUILD_DIR = ../lib;
+			};
+			name = Release;
+		};
+		D3AB7C0010BB44B8B38793FB /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",ZSTD_MULTITHREAD,"'PLAY_VERSION=\"0.30\"'","'XXH_NAMESPACE=ZSTD_'","'ZSTD_LEGACY_SUPPORT=5'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (../cmake/Source/ui_ios/Source/Framework/zstd_zlibwrapper/zstd/lib,"../Play-/deps/Dependencies/zstd/build/cmake/lib","../Play-/deps/Dependencies/zstd/build/cmake/../../lib","../Play-/deps/Dependencies/zstd/build/cmake/../../lib/common","../Play-/deps/Dependencies/zstd/build/cmake/../../lib/legacy","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (" -mios-version-min=12.2 -Wall -Wextra -Wundef -Wshadow -Wcast-align -Wcast-qual -Wstrict-prototypes        -DNDEBUG -fPIC ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = zstd;
+				SECTORDER_FLAGS = "";
+				
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E0C3D87486364AB19EBD397D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
 				
@@ -1236,252 +1650,10 @@ fi
 			};
 			name = Release;
 		};
-		3B3CAAE489E348E3A58ABFD0 /* Debug */ = {
+		E53DD4728AF44DBA86F4B314 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		5132CABB59E04DC5AF82D259 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		634763EC0CA144A093260D29 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				CODE_SIGN_IDENTITY = "";
-				DEVELOPMENT_TEAM = XXXXXXXXXX;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				PROVISIONING_PROFILE_SPECIFIER = "iOS Team Provisioning Profile: *";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
-				BUILD_DIR = ../lib;
-			};
-			name = RelWithDebInfo;
-		};
-		6B1FC909E87E4542919D13F5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		7414EC7E49654EA786EFA13C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		829F5D060D8245DC9B4DFF4E /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = package;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		891851E0DC364D729A77B7C4 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		894A025916CD43DFBCCEFCD2 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		8DE3A1AE413B46F2B82A7FD6 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		99D15F779A5243ED8C75BC6B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = package;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		9C145176DE484450B4367FD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		A01A42E9DAB14383A69409E8 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = "clean-all";
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		A60C3E8FEE104B07BE16ABFE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				CODE_SIGN_IDENTITY = "";
-				DEVELOPMENT_TEAM = XXXXXXXXXX;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				PROVISIONING_PROFILE_SPECIFIER = "iOS Team Provisioning Profile: *";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.0;
-				BUILD_DIR = ../lib;
-			};
-			name = Release;
-		};
-		AE882DE40F0440F1AB9BF9DB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1496,163 +1668,12 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = Debug;
+			name = Release;
 		};
-		B7E53B943EAA46F9954D673B /* Debug */ = {
+		E9EEF966220444BCB7C0FFE1 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = "clean-all";
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		B80CE2512ABB482A8E18E02E /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		C32AB9E42EBA4CDCBEBBE470 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = uninstall;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		C858FB1439AC4A848F24DF61 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = uninstall;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		CB7A29A020484A0094D51EEC /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = uninstall;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		CC5DCE8B23E941CE852CD644 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = RUN_TESTS;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		CE405183BBD342E89199C730 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		D6B58261F95D410FA7A8B5A2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = package;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		D8D597F231CD450ABB4E5EDC /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = arm64;
 				COMBINE_HIDPI_IMAGES = YES;
 				
@@ -1678,9 +1699,50 @@ fi
 			};
 			name = MinSizeRel;
 		};
-		E557CE30C652414AB17785BE /* MinSizeRel */ = {
+		F3CDE5DF8A7D4BCD832DA20F /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		FF6D548DFEA3416EBDE459A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		FF7EB91AF7664768ACCAE36C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -1695,130 +1757,111 @@ fi
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
-			name = MinSizeRel;
-		};
-		F01AC8715AB645F7982CCFD7 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = "clean-all";
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		42BE6445A7744389BF5F6BAC /* Build configuration list for PBXAggregateTarget "package" */ = {
+		2EE6B0E9FEBE45B1BB2930C0 /* Build configuration list for PBXProject "zstd" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D6B58261F95D410FA7A8B5A2 /* Debug */,
-				99D15F779A5243ED8C75BC6B /* Release */,
-				E557CE30C652414AB17785BE /* MinSizeRel */,
-				829F5D060D8245DC9B4DFF4E /* RelWithDebInfo */,
+				CE67DA0EDCA6401293BD9A1C /* Debug */,
+				CF29809472274F8D94132B9E /* Release */,
+				639870B8B800458DA183C90F /* MinSizeRel */,
+				78C013B0F5D241C58E0CB6FD /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		565066DA8FCF4CB19FE95252 /* Build configuration list for PBXNativeTarget "libzstd_static" */ = {
+		6CA4EEAD90ED4EBFAACB42F1 /* Build configuration list for PBXAggregateTarget "package" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				198BB6C1498344859EAF2141 /* Debug */,
-				377ED878F4614A878B61E33E /* Release */,
-				D8D597F231CD450ABB4E5EDC /* MinSizeRel */,
-				0F37D3EDF91340959AE16AC4 /* RelWithDebInfo */,
+				FF7EB91AF7664768ACCAE36C /* Debug */,
+				9E3F7F0D17904E1D9E5CE757 /* Release */,
+				230C87501CC5425DB6ED4B6F /* MinSizeRel */,
+				6F0E1C064C6747D5B6CC2C9E /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		6772369FD50741E9A2AAA984 /* Build configuration list for PBXAggregateTarget "install" */ = {
+		7C7F8F3996EF4533A90F0DB3 /* Build configuration list for PBXNativeTarget "libzstd_static" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6B1FC909E87E4542919D13F5 /* Debug */,
-				04181301EF454FC1ABFED2DB /* Release */,
-				894A025916CD43DFBCCEFCD2 /* MinSizeRel */,
-				8DE3A1AE413B46F2B82A7FD6 /* RelWithDebInfo */,
+				8240A488A0AD4B28B0E71B2B /* Debug */,
+				E0C3D87486364AB19EBD397D /* Release */,
+				E9EEF966220444BCB7C0FFE1 /* MinSizeRel */,
+				D3AB7C0010BB44B8B38793FB /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		7B0AC53183D94AD08BF4CCD0 /* Build configuration list for PBXProject "zstd" */ = {
+		9A45393233544A67838B5E45 /* Build configuration list for PBXAggregateTarget "clean-all" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				06CA12FA0EE542908B68A278 /* Debug */,
-				A60C3E8FEE104B07BE16ABFE /* Release */,
-				01B9D976227343B58D0F5DF9 /* MinSizeRel */,
-				634763EC0CA144A093260D29 /* RelWithDebInfo */,
+				A8C8237F7E5348B7B8C70C5A /* Debug */,
+				5D28B5CE9182480A93E5835A /* Release */,
+				2E2CAEA7867F4129B1AEC383 /* MinSizeRel */,
+				8562C4588930403280F4AF00 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		908277812FE4409CA7C9FEC9 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+		A2EE1A561E89400EAE1DB479 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AE882DE40F0440F1AB9BF9DB /* Debug */,
-				09AD9484E911457199121FD9 /* Release */,
-				CC5DCE8B23E941CE852CD644 /* MinSizeRel */,
-				1BEEC7C5EFFD45CEBC5F25EC /* RelWithDebInfo */,
+				4884E636D3914960937B7AC0 /* Debug */,
+				FF6D548DFEA3416EBDE459A9 /* Release */,
+				9B08DE7F5471468FAB6A7F21 /* MinSizeRel */,
+				0BABE8FA1D724F5D8537962B /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		9743076C670648EEA258B7F7 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		B5750A56C7D4436B934C09C9 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B3CAAE489E348E3A58ABFD0 /* Debug */,
-				9C145176DE484450B4367FD5 /* Release */,
-				CE405183BBD342E89199C730 /* MinSizeRel */,
-				1BA34F557B0C41618E13A72E /* RelWithDebInfo */,
+				791564C215094AAE843A8909 /* Debug */,
+				E53DD4728AF44DBA86F4B314 /* Release */,
+				F3CDE5DF8A7D4BCD832DA20F /* MinSizeRel */,
+				3C64AC5C72CF4EA5B8C484FC /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D1476BF018454771A6FE5064 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		D7E85848626743B78895BA4F /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5132CABB59E04DC5AF82D259 /* Debug */,
-				7414EC7E49654EA786EFA13C /* Release */,
-				891851E0DC364D729A77B7C4 /* MinSizeRel */,
-				B80CE2512ABB482A8E18E02E /* RelWithDebInfo */,
+				9E1AA4C8A6534E029F38DA51 /* Debug */,
+				6BBC98CB545344E78251136C /* Release */,
+				2ED0CB70FECE4A4C82E72500 /* MinSizeRel */,
+				7DD6AEC85A894AF2A886AD38 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		DC4F401F4C764E53B44D3B06 /* Build configuration list for PBXAggregateTarget "clean-all" */ = {
+		E9433D7F4F884B98A5FDCA14 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7E53B943EAA46F9954D673B /* Debug */,
-				338B31A6C5FF4F1E82477858 /* Release */,
-				A01A42E9DAB14383A69409E8 /* MinSizeRel */,
-				F01AC8715AB645F7982CCFD7 /* RelWithDebInfo */,
+				461FA859DA14438BA9AA9556 /* Debug */,
+				27064BA8599C4D878BCA8880 /* Release */,
+				89395990B6EF4B1099B28A90 /* MinSizeRel */,
+				BA21B874BA8942AD8007FA6E /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		DD56BDB0ADEF48A3BB09EFD1 /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+		F5BA059469B84FC5A1A789B1 /* Build configuration list for PBXAggregateTarget "install" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C858FB1439AC4A848F24DF61 /* Debug */,
-				18964797AB734D3ABAC17CC8 /* Release */,
-				CB7A29A020484A0094D51EEC /* MinSizeRel */,
-				C32AB9E42EBA4CDCBEBBE470 /* RelWithDebInfo */,
+				CDF3BDAC90BB44CFA6117B9D /* Debug */,
+				2E81C4F500504AB5A359C099 /* Release */,
+				603D3293CBEC43B7A6A42B04 /* MinSizeRel */,
+				7E96B228878347FBA3855AB5 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2FA64775A0044CD3A5BE7C05 /* Project object */;
+	rootObject = FE71BB3CEE234B82A5251D6D /* Project object */;
 }

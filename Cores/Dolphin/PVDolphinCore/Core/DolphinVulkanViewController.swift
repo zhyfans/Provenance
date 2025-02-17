@@ -10,13 +10,14 @@ import Foundation
 import UIKit
 import MetalKit
 import os
+import PVLogging
 
 @objc public class DolphinVulkanViewController: UIViewController {
-	private var core: PVDolphinCore!
+	private var core: PVDolphinCoreBridge!
 	private var metalView: MTKView!
 	private var dev: MTLDevice!
 
-	@objc public init(resFactor: Int8, videoWidth: CGFloat, videoHeight: CGFloat, core: PVDolphinCore) {
+	@objc public init(resFactor: Int8, videoWidth: CGFloat, videoHeight: CGFloat, core: PVDolphinCoreBridge) {
 		super.init(nibName: nil, bundle: nil)
 		self.core = core;
 		self.dev = MTLCreateSystemDefaultDevice()!
@@ -35,13 +36,13 @@ import os
 		super.init(coder:coder)
 	}
 	@objc public override func viewDidLoad() {
-		NSLog("View Did Load\n")
+		ILOG("View Did Load\n")
 		self.view=metalView;
-        NSLog("Starting VM\n")
+        ILOG("Starting VM\n")
 		core.startVM(self.view)
 	}
 	@objc public override func viewDidLayoutSubviews() {
-        NSLog("View Size Changed\n")
+        ILOG("View Size Changed\n")
 		core.refreshScreenSize()
 	}
 }

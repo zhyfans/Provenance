@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>PVCoreIdentifier</key>
-	<string>com.provenance.dolphin</string>
+	<string>com.provenance.core.dolphin</string>
 	<key>PVPrincipleClass</key>
-	<string>PVDolphinCore</string>
+	<string>PVDolphin.PVDolphinCore</string>
 	<key>PVSupportedSystems</key>
 	<array>
 		<string>com.provenance.gamecube</string>
@@ -17,5 +17,7 @@
 	<string>https://github.com/OatmealDome/dolphin</string>
 	<key>PVProjectVersion</key>
 	<string>3.2.0b2 (186)</string>
+	<key>PVAppStoreDisabled</key>
+	<true/>
 </dict>
 </plist>

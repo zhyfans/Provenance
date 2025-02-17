@@ -222,3 +222,9 @@ NSString *message = [NSString stringWithFormat:format, ##__VA_ARGS__]; \
 NSString *logMessage = [NSString stringWithFormat:@"STUB::%@", message]; \
 WLOG(@"%@", logMessage); \
 } while(0) \
+
+#define FORMAT(format, ...) [NSString stringWithFormat:(format), ##__VA_ARGS__]
+
+@interface ClassFinderObjC : NSObject
++ (NSArray<Class> *)findSubclassesOf:(Class)parentClass;
+@end

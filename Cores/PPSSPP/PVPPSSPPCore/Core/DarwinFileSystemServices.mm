@@ -18,6 +18,8 @@
 #if __has_include(<UIKit/UIKit.h>)
 #include <UIKit/UIKit.h>
 
+#if!TARGET_OS_TV
+
 @interface DocumentPickerDelegate : NSObject <UIDocumentPickerDelegate>
 @property DarwinDirectoryPanelCallback callback;
 @end
@@ -39,8 +41,8 @@
 }
 
 @end
-
-#else
+#endif
+#elif __has_include(<AppKit/AppKit.h>)
 #include <AppKit/AppKit.h>
 #endif // __has_include(<UIKit/UIKit.h>)
 
@@ -59,7 +61,7 @@ void DarwinFileSystemServices::presentDirectoryPanel(DarwinDirectoryPanelCallbac
         } else if (modalResponse == NSModalResponseCancel) {
             callback(false, Path());
         }
-#elif PPSSPP_PLATFORM(IOS)
+#elif PPSSPP_PLATFORM(IOS) && !TARGET_OS_TV
 		UIViewController *rootViewController = UIApplication.sharedApplication
 			.keyWindow
 			.rootViewController;
@@ -91,8 +93,13 @@ Path DarwinFileSystemServices::appropriateMemoryStickDirectoryToUse() {
 
 Path DarwinFileSystemServices::__defaultMemoryStickPath() {
 #if PPSSPP_PLATFORM(IOS)
-    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)
-                               objectAtIndex:0];
+    #if TARGET_OS_TV
+        NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)
+                                   objectAtIndex:0];
+    #else
+        NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)
+                                   objectAtIndex:0];
+    #endif
     return Path(documentsPath.UTF8String);
 #elif PPSSPP_PLATFORM(MAC)
     return g_Config.defaultCurrentDirectory / ".config/ppsspp";

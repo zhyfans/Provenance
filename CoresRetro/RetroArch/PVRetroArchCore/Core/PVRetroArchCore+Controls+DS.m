@@ -1,16 +1,13 @@
 //
-//  PVRetroArchCore+Controls.m
+//  PVRetroArchCoreBridge+Controls.m
 //  PVRetroArch
 //
 //  Created by Joseph Mattiello on 11/1/18.
 //  Copyright © 2021 Provenance. All rights reserved.
 //
 
-#import <PVRetroArch/PVRetroArch.h>
 #import <Foundation/Foundation.h>
-#import <PVSupport/PVSupport.h>
-#import "PVRetroArchCore.h"
-#import "PVRetroArchCore+Controls.h"
+@import PVCoreBridge;
 #import "./cocoa_common.h"
 
 /* RetroArch Includes */
@@ -33,10 +30,10 @@
 #include "../ui_companion_driver.h"
 
 extern GCController *touch_controller;
-@interface PVRetroArchCore (DSControls) <PVDSSystemResponderClient>
+@interface PVRetroArchCoreBridge (DSControls) <PVDSSystemResponderClient>
 @end
 
-@implementation PVRetroArchCore (DSControls)
+@implementation PVRetroArchCoreBridge (DSControls)
 #pragma mark - Control
 - (void)didPushDSButton:(PVDSButton)button forPlayer:(NSInteger)player {
     [self handleDSButton:button forPlayer:player pressed:true value:1];
@@ -50,13 +47,7 @@ extern GCController *touch_controller;
     [self handleDSButton:button forPlayer:player pressed:(value != 0) value:value];
 }
 - (void)handleDSButton:(PVDSButton)button forPlayer:(NSInteger)player pressed:(BOOL)pressed value:(CGFloat)value {
-    static float xAxis=0;
-    static float yAxis=0;
-    static float ltXAxis=0;
-    static float ltYAxis=0;
-    static float rtXAxis=0;
-    static float rtYAxis=0;
-    static float axisMult = 1.0;
+
     switch (button) {
         case(PVDSButtonUp):
             yAxis=pressed?(!xAxis?1.0:0.5):0;
@@ -94,6 +85,9 @@ extern GCController *touch_controller;
             break;
         case(PVDSButtonScreenSwap):
             [touch_controller.extendedGamepad.rightTrigger setValue:pressed?1:0];
+            break;
+        case(PVDSButtonRotate):
+            [touch_controller.extendedGamepad.leftTrigger setValue:pressed?1:0];
             break;
         case(PVDSButtonSelect):
             [touch_controller.extendedGamepad.buttonOptions setValue:pressed?1:0];

@@ -10,7 +10,6 @@ export VULKAN_SDK="./" # Path to Vulkan SDK
 export Vulkan_INCLUDE_DIR="../../../MoltenVK/MoltenVK/include"
 export FRAMEWORK_VULKAN_LIBS="../../../MoltenVK/MoltenVK/dylib/iOS/libMoltenVK.dylib"
 export Vulkan_LIBRARY="./"
-ln -s ../../../Cores/Dolphin/dolphin-ios/Externals/MoltenVK lib
 ln -s ../../../../MoltenVK/MoltenVK ../Play-/Source/MoltenVK
 
 #export Vulkan_LIBRARY=1.3.204 # Version of Vulkan SDK
@@ -21,7 +20,7 @@ ln -s ../../../../MoltenVK/MoltenVK ../Play-/Source/MoltenVK
 #ln -s ../../../cmake/MoltenVK ../Play-/Source/ui_ios/MoltenVK
 
 # This sets mobile to true...
-cp ../PVPlayCore/Core/GSH_VulkanPlatformDefs.h ../Play-/Source/gs/GSH_Vulkan/
+#cp ../PVPlayCore/Core/GSH_VulkanPlatformDefs.h ../Play-/Source/gs/GSH_Vulkan/
 echo "VULKAN_SDK="${VULKAN_SDK}
 cmake ../Play- -G Xcode \
 -DCMAKE_TOOLCHAIN_FILE=../Play-/deps/Dependencies/cmake-ios/ios.cmake \
@@ -29,6 +28,12 @@ cmake ../Play- -G Xcode \
 -DFRAMEWORK_VULKAN_LIBS=${FRAMEWORK_VULKAN_LIBS} \
 -DUSE_GSH_VULKAN=ON \
 -DCMAKE_BUILD_TYPE=Release \
+-DCMAKE_C_FLAGS_DEBUG="-DDEBUG" \
+-DCMAKE_CXX_FLAGS_DEBUG="-DDEBUG" \
+-DCMAKE_C_FLAGS_MINSIZEREL="-Os -DNDEBUG" \
+-DCMAKE_CXX_FLAGS_MINSIZEREL="-Os -DNDEBUG" \
+-DCMAKE_C_FLAGS_RELWITHDEBINFO="-O2 -g -DNDEBUG" \
+-DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-O2 -g -DNDEBUG" \
 -DCMAKE_C_FLAGS_RELEASE="-Ofast -DNDEBUG" \
 -DCMAKE_CXX_FLAGS_RELEASE="-Ofast -DNDEBUG" \
 -DCMAKE_PREFIX_PATH="${VULKAN_SDK}" \
@@ -39,3 +44,5 @@ cmake ../Play- -G Xcode \
 
 # Path adjustements
 python3 xcode_absolute_path_to_relative.py
+#find . -name "*.make" -exec rm {} \;
+#find . -name "*.cmake" -exec rm {} \;

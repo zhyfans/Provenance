@@ -1,16 +1,13 @@
 //
-//  PVRetroArchCore+Controls.m
+//  PVRetroArchCoreBridge+Controls.m
 //  PVRetroArch
 //
 //  Created by Joseph Mattiello on 11/1/18.
 //  Copyright © 2021 Provenance. All rights reserved.
 //
 
-#import <PVRetroArch/PVRetroArch.h>
 #import <Foundation/Foundation.h>
-#import <PVSupport/PVSupport.h>
-#import "PVRetroArchCore.h"
-#import "PVRetroArchCore+Controls.h"
+@import PVCoreBridge;
 #import "./cocoa_common.h"
 
 /* RetroArch Includes */
@@ -33,10 +30,10 @@
 #include "../ui_companion_driver.h"
 
 extern GCController *touch_controller;
-@interface PVRetroArchCore (PSXControls) <PVPSXSystemResponderClient>
+@interface PVRetroArchCoreBridge (PSXControls) <PVPSXSystemResponderClient>
 @end
 
-@implementation PVRetroArchCore (PSXControls)
+@implementation PVRetroArchCoreBridge (PSXControls)
 #pragma mark - Control
 - (void)didPushPSXButton:(PVPSXButton)button forPlayer:(NSInteger)player {
     [self handlePSXButton:button forPlayer:player pressed:true value:1];
@@ -46,17 +43,23 @@ extern GCController *touch_controller;
     [self handlePSXButton:button forPlayer:player pressed:false value:0];
 }
 
-- (void)didMovePSXJoystickDirection:(PVPSXButton)button withValue:(CGFloat)value forPlayer:(NSInteger)player {
-    [self handlePSXButton:button forPlayer:player pressed:(value != 0) value:value];
+- (void)didMovePSXJoystickDirection:(PVPSXButton)button withXValue:(CGFloat)xValue withYValue:(CGFloat)yValue forPlayer:(NSInteger)player {
+    switch (button) {
+        case(PVPSXButtonLeftAnalog):
+            [touch_controller.extendedGamepad.leftThumbstick setValueForXAxis:xValue yAxis:yValue];
+            break;
+        case(PVPSXButtonRightAnalog):
+            if (self.bindAnalogDpad) {
+                [touch_controller.extendedGamepad.leftThumbstick setValueForXAxis:xValue yAxis:yValue];
+            }
+            [touch_controller.extendedGamepad.rightThumbstick setValueForXAxis:xValue yAxis:yValue];
+            break;
+    }
 }
 - (void)handlePSXButton:(PVPSXButton)button forPlayer:(NSInteger)player pressed:(BOOL)pressed value:(CGFloat)value {
-    static float xAxis=0;
-    static float yAxis=0;
-    static float ltXAxis=0;
-    static float ltYAxis=0;
-    static float rtXAxis=0;
-    static float rtYAxis=0;
-    static float axisMult = 1.0;
+
+    static float axisRounding = 0.22;
+
     switch (button) {
         case(PVPSXButtonUp):
             yAxis=pressed?(!xAxis?1.0:0.5):0;
@@ -110,42 +113,6 @@ extern GCController *touch_controller;
             break;
         case(PVPSXButtonStart):
             [touch_controller.extendedGamepad.buttonMenu setValue:pressed?1:0];
-            break;
-        case(PVPSXButtonLeftAnalogLeft):
-            ltXAxis = -value * axisMult;
-            [touch_controller.extendedGamepad.dpad setValueForXAxis:ltXAxis yAxis:ltYAxis];
-            [touch_controller.extendedGamepad.leftThumbstick setValueForXAxis:ltXAxis yAxis:ltYAxis];
-            break;
-        case(PVPSXButtonLeftAnalogRight):
-            ltXAxis = value * axisMult;
-            [touch_controller.extendedGamepad.dpad setValueForXAxis:ltXAxis yAxis:ltYAxis];
-            [touch_controller.extendedGamepad.leftThumbstick setValueForXAxis:ltXAxis yAxis:ltYAxis];
-            break;
-        case(PVPSXButtonLeftAnalogUp):
-            ltYAxis = value * axisMult;
-            [touch_controller.extendedGamepad.dpad setValueForXAxis:ltXAxis yAxis:ltYAxis];
-            [touch_controller.extendedGamepad.leftThumbstick setValueForXAxis:ltXAxis yAxis:ltYAxis];
-            break;
-        case(PVPSXButtonLeftAnalogDown):
-            ltYAxis = -value * axisMult;
-            [touch_controller.extendedGamepad.dpad setValueForXAxis:ltXAxis yAxis:ltYAxis];
-            [touch_controller.extendedGamepad.leftThumbstick setValueForXAxis:ltXAxis yAxis:ltYAxis];
-            break;
-        case(PVPSXButtonRightAnalogLeft):
-            rtXAxis = -value * axisMult;
-            [touch_controller.extendedGamepad.rightThumbstick setValueForXAxis:rtXAxis yAxis:rtYAxis];
-            break;
-        case(PVPSXButtonRightAnalogRight):
-            rtXAxis = value * axisMult;
-            [touch_controller.extendedGamepad.rightThumbstick setValueForXAxis:rtXAxis yAxis:rtYAxis];
-            break;
-        case(PVPSXButtonRightAnalogUp):
-            rtYAxis = value * axisMult;
-            [touch_controller.extendedGamepad.rightThumbstick setValueForXAxis:rtXAxis yAxis:rtYAxis];
-            break;
-        case(PVPSXButtonRightAnalogDown):
-            rtYAxis = -value * axisMult;
-            [touch_controller.extendedGamepad.rightThumbstick setValueForXAxis:rtXAxis yAxis:rtYAxis];
             break;
     }
 }

@@ -83,9 +83,9 @@ static GLContextClass* g_hw_ctx     = NULL;
 static GLContextClass* g_ctx        = NULL;
 static unsigned g_gl_minor          = 0;
 static unsigned g_gl_major          = 0;
-//#if defined(HAVE_COCOATOUCH)
+#if defined(HAVE_COCOATOUCH)
 GLKView *glk_view            = NULL;
-//#endif
+#endif
 
 /* Forward declaration */
 CocoaView *cocoaview_get(void);
@@ -146,7 +146,7 @@ void cocoa_gl_gfx_ctx_update(void)
 void *glkitview_init(void)
 {
    glk_view                      = [GLKView new];
-#if TARGET_OS_IOS
+#if TARGET_OS_IOS && !TARGET_OS_TV
    glk_view.multipleTouchEnabled = YES;
 #endif
    glk_view.enableSetNeedsDisplay = NO;
@@ -237,6 +237,19 @@ static void cocoa_gl_gfx_ctx_get_video_size(void *data,
    *height                         = CGRectGetHeight(size) * screenscale;
 }
 #endif
+
+static float cocoa_gl_gfx_ctx_get_refresh_rate(void *data)
+{
+#ifdef OSX
+    CGDirectDisplayID mainDisplayID = CGMainDisplayID();
+    CGDisplayModeRef currentMode = CGDisplayCopyDisplayMode(mainDisplayID);
+    float currentRate = CGDisplayModeGetRefreshRate(currentMode);
+    CFRelease(currentMode);
+    return currentRate;
+#else
+    return [UIScreen mainScreen].maximumFramesPerSecond;
+#endif
+}
 
 static gfx_ctx_proc_t cocoa_gl_gfx_ctx_get_proc_address(const char *symbol_name)
 {
@@ -478,16 +491,31 @@ static bool cocoa_gl_gfx_ctx_set_video_mode(void *data,
 {
    cocoa_ctx_data_t *cocoa_ctx = (cocoa_ctx_data_t*)data;
 
+#if defined(HAVE_OPENGLES3)
    if (cocoa_ctx->flags & COCOA_CTX_FLAG_USE_HW_CTX)
+   {
+      g_hw_ctx      = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
+      g_ctx         = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3 sharegroup:g_hw_ctx.sharegroup];
+   }
+   else
+      g_ctx         = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
+#elif defined(HAVE_OPENGLES2)
+   if (cocoa_ctx->flags & COCOA_CTX_FLAG_USE_HW_CTX)
+   {
       g_hw_ctx      = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-   g_ctx            = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-   glk_view.context = g_ctx;
+      g_ctx         = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2 sharegroup:g_hw_ctx.sharegroup];
+   }
+   else
+      g_ctx         = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+#endif
 
 #ifdef OSX
    [g_ctx makeCurrentContext];
 #else
    [EAGLContext setCurrentContext:g_ctx];
 #endif
+    
+    glk_view.context = g_ctx;
 
    /* TODO: Maybe iOS users should be able to 
     * show/hide the status bar here? */
@@ -543,7 +571,7 @@ const gfx_ctx_driver_t gfx_ctx_cocoagl = {
 #else
    cocoa_gl_gfx_ctx_get_video_size,
 #endif
-   NULL, /* get_refresh_rate */
+   cocoa_gl_gfx_ctx_get_refresh_rate, /* get_refresh_rate */
    NULL, /* get_video_output_size */
    NULL, /* get_video_output_prev */
    NULL, /* get_video_output_next */

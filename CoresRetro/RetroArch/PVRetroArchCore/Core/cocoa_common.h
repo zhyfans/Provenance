@@ -14,21 +14,21 @@
  *  If not, see <http://www.gnu.org/licenses/>.
  */
 // Local Changes:
-// Add PVRetroArchCore.h
+// Add PVRetroArchCoreBridge.h
 #ifndef __COCOA_COMMON_SHARED_H
 #define __COCOA_COMMON_SHARED_H
 
-#include "PVRetroArchCore.h"
+#import <PVRetroArch/PVRetroArchCoreBridge.h>
 
-#include <Foundation/Foundation.h>
+#import <Foundation/Foundation.h>
 
 #if defined(HAVE_COCOATOUCH)
-#include <UIKit/UIKit.h>
+#import <UIKit/UIKit.h>
 #if TARGET_OS_TV
 #import <GameController/GameController.h>
 #endif
 #else
-#include <AppKit/AppKit.h>
+#import <AppKit/AppKit.h>
 #endif
 
 #include "../../../retroarch.h"

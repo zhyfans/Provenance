@@ -1,14 +1,14 @@
 // Local Changes:
-// Add PVRetroArchCore.h
+// Add PVRetroArchCoreBridge.h
 #import <Foundation/Foundation.h>
-#import <PVSupport/PVSupport.h>
-#import <PVSupport/PVEmulatorCore.h>
-#import <PVSupport/PVSupport-Swift.h>
+#import <PVCoreObjCBridge/PVCoreObjCBridge.h>
+
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 #import <Metal/Metal.h>
 #import <MetalKit/MetalKit.h>
-#import "PVRetroArchCore.h"
+#import <PVRetroArch/PVRetroArchCoreBridge.h>
+
 #include "../gfx/video_driver.h"
 
 /* RetroArch Includes */

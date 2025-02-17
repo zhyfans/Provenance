@@ -1,172 +1,62 @@
+//
+//  PVDolphinCore.swift
+//  PVDolphin
+//
+//  Created by Joseph Mattiello on 10/8/24.
+//  Copyright © 2024 Provenance Emu. All rights reserved.
+//
+
 import Foundation
+import PVCoreBridge
+import GameController
+import PVLogging
+import PVAudio
+import PVEmulatorCore
 
-extension PVDolphinCore: CoreOptional {
-	 static var resolutionOption: CoreOption = {
-		  .enumeration(.init(title: "Resolution Upscaling",
-				description: "(Requires Restart)",
-				requiresRestart: true),
-			values: [
-				.init(title: "1X", description: "1X", value: 1),
-				.init(title: "2X", description: "2X", value: 2),
-				.init(title: "3X", description: "3X", value: 3),
-				.init(title: "4X", description: "4X", value: 4),
-				.init(title: "5X", description: "5X", value: 5),
-				.init(title: "6X", description: "6X", value: 6),
-				.init(title: "7X", description: "7X", value: 7),
-				.init(title: "8X", description: "8X", value: 8),
-				.init(title: "16X", description: "16X", value: 16),
-			],
-			defaultValue: 2)
-			}()
-
-	static var gsOption: CoreOption = {
-		 .enumeration(.init(title: "Graphics Handler",
-			   description: "(Requires Restart)",
-			   requiresRestart: true),
-		  values: [
-			   .init(title: "Vulkan", description: "Vulkan", value: 0),
-			   .init(title: "OpenGL", description: "OpenGL", value: 1)
-		  ],
-		  defaultValue: 0)
-	}()
-
-	static var forceBilinearFilteringOption: CoreOption = {
-		.bool(.init(
-			title: "Enable bilinear filtering.",
-			description: nil,
-			requiresRestart: true),
-		defaultValue: false)
-	}()
+@objc
+@objcMembers
+open class PVDolphinCore: PVEmulatorCore, @unchecked Sendable {
+    // MARK: Lifecycle
     
-    static var enableCheatOption: CoreOption = {
-        .bool(.init(
-            title: "Enable Cheat Codes (Runs Slower)",
-            description: nil,
-            requiresRestart: true),
-        defaultValue: false)
-    }()
+    let _bridge: PVDolphinCoreBridge = .init()
 
-	static var msaaOption: CoreOption = {
-		 .enumeration(.init(title: "Multi Surface Anti-Aliasing",
-			   description: "(Requires Restart)",
-			   requiresRestart: true),
-		   values: [
-			   .init(title: "1X", description: "1X", value: 1),
-			   .init(title: "2X", description: "2X", value: 2),
-			   .init(title: "4X", description: "4X", value: 4),
-			   .init(title: "8X", description: "8X", value: 8),
-		   ],
-		   defaultValue: 8)
-		   }()
-
-	static var ssaaOption: CoreOption = {
-		.bool(.init(
-			title: "Single Surface Anti-Aliasing",
-			description: nil,
-			requiresRestart: false),
-		defaultValue: true)
-	}()
-
-	static var fastMemoryOption: CoreOption = {
-		.bool(.init(
-			title: "Fast Memory (Much Faster)",
-			description: nil,
-			requiresRestart: true),
-		defaultValue: true)
-	}()
-
-	static var cpuOption: CoreOption = {
-		 .enumeration(.init(title: "CPU Type",
-			   description: "(Requires Restart)",
-			   requiresRestart: true),
-		  values: [
-			.init(title: "Interpreter", description: "Interpreter", value: 0),
-			.init(title: "Cached Interpreter", description: "Cached Interpreter", value: 1),
-			.init(title: "Just In Time", description: "Just In Time", value: 2)
-		  ],
-		  defaultValue: 2)
-	}()
-
-	static var cpuClockOption: CoreOption = {
-	.enumeration(.init(title: "CPU Overclock",
-		  description: "(Requires Restart)",
-		  requiresRestart: true),
-	  values: [
-		  .init(title: "1X", description: "1X", value: 1),
-		  .init(title: "2X", description: "2X", value: 2),
-		  .init(title: "4X", description: "4X", value: 4),
-		  .init(title: "8X", description: "8X", value: 8),
-	  ],
-	  defaultValue: 1)
-	  }()
-    static var multiPlayerOption: CoreOption = {
-        .bool(.init(
-            title: MAP_MULTIPLAYER,
-            description: nil,
-            requiresRestart: false),
-              defaultValue: false)
-    }()
-	public static var options: [CoreOption] {
-		var options = [CoreOption]()
-		let coreOptions: [CoreOption] = [
-			resolutionOption, gsOption, forceBilinearFilteringOption,
-			cpuOption, msaaOption, ssaaOption, cpuClockOption,
-			fastMemoryOption, enableCheatOption, multiPlayerOption]
-		let coreGroup:CoreOption = .group(.init(title: "Dolphin! Core",
-												description: "Global options for Dolphin!"),
-										  subOptions: coreOptions)
-		options.append(contentsOf: [coreGroup])
-		return options
-	}
+    public required init() {
+        super.init()
+        self.bridge = (_bridge as! any ObjCBridgedCoreBridge)
+    }
 }
 
-@objc public extension PVDolphinCore {
-	@objc var resolution: Int{
-		PVDolphinCore.valueForOption(PVDolphinCore.resolutionOption).asInt ?? 0
-	}
-	@objc var gs: Int{
-		PVDolphinCore.valueForOption(PVDolphinCore.gsOption).asInt ?? 0
-	}
-	@objc var bilinearFiltering: Bool {
-		PVDolphinCore.valueForOption(PVDolphinCore.forceBilinearFilteringOption).asBool
-	}
-	@objc var cpu: Int{
-		PVDolphinCore.valueForOption(PVDolphinCore.cpuOption).asInt ?? 0
-	}
-	@objc var cpuClock: Int{
-		PVDolphinCore.valueForOption(PVDolphinCore.cpuClockOption).asInt ?? 0
-	}
-    @objc var enableCheatOption: Bool{
-        PVDolphinCore.valueForOption(PVDolphinCore.enableCheatOption).asBool
+extension PVDolphinCore: PVWiiSystemResponderClient {
+    public func didMoveJoystick(_ button: PVCoreBridge.PVWiiMoteButton, withXValue xValue: CGFloat, withYValue yValue: CGFloat, forPlayer player: Int) {
+        (_bridge as! PVWiiSystemResponderClient).didMoveJoystick(button, withXValue: xValue, withYValue: yValue, forPlayer: player)
     }
-	@objc var msaaOption: Int{
-		PVDolphinCore.valueForOption(PVDolphinCore.msaaOption).asInt ?? 0
-	}
-	@objc var ssaaOption: Bool{
-		PVDolphinCore.valueForOption(PVDolphinCore.ssaaOption).asBool
-	}
-	@objc var fastMemoryOption: Bool{
-		PVDolphinCore.valueForOption(PVDolphinCore.fastMemoryOption).asBool
-	}
-    @objc var multiPlayerOption: Bool{
-        PVDolphinCore.valueForOption(PVDolphinCore.multiPlayerOption).asBool
+    public func didMoveJoystick(_ button: Int, withXValue xValue: CGFloat, withYValue yValue: CGFloat, forPlayer player: Int) {
+        (_bridge as! PVWiiSystemResponderClient).didMoveJoystick(button, withXValue: xValue, withYValue: yValue, forPlayer: player)
     }
-    
-	func parseOptions() {
-		self.gsPreference = NSNumber(value: gs).int8Value
-		self.resFactor = NSNumber(value: resolution).int8Value
-		self.cpuType = NSNumber(value:cpu).int8Value
-		self.isBilinear = bilinearFiltering
-		self.msaa = NSNumber(value: msaaOption).int8Value
-		self.ssaa = ssaaOption
-		if self.msaa < 2 {
-			self.ssaa=false
-		}
-        self.enableCheatCode = enableCheatOption
-		self.fastMemory = fastMemoryOption
-		self.cpuOClock = NSNumber(value: cpuClock).int8Value
-        self.multiPlayer = multiPlayerOption
-	}
+    public func didPush(_ button: PVCoreBridge.PVWiiMoteButton, forPlayer player: Int) {
+        (_bridge as! PVWiiSystemResponderClient).didPush(button, forPlayer: player)
+    }
+    public func didRelease(_ button: PVCoreBridge.PVWiiMoteButton, forPlayer player: Int) {
+        (_bridge as! PVWiiSystemResponderClient).didRelease(button, forPlayer: player)
+    }
+}
+
+extension PVDolphinCore: PVGameCubeSystemResponderClient {
+    public func didPush(_ button: PVCoreBridge.PVGCButton, forPlayer player: Int) {
+        (_bridge as! PVGameCubeSystemResponderClient).didPush(button, forPlayer: player)
+    }
+    public func didRelease(_ button: PVCoreBridge.PVGCButton, forPlayer player: Int) {
+        (_bridge as! PVGameCubeSystemResponderClient).didRelease(button, forPlayer: player)
+    }
+    public func didMoveJoystick(_ button: PVCoreBridge.PVGCButton, withXValue xValue: CGFloat, withYValue yValue: CGFloat, forPlayer player: Int) {
+        (_bridge as! PVGameCubeSystemResponderClient).didMoveJoystick(button, withXValue: xValue, withYValue: yValue, forPlayer: player)
+    }
+}
+
+extension PVDolphinCore: CoreOptional {
+    public static var options: [PVCoreBridge.CoreOption] {
+        PVDolphinCoreOptions.options
+    }
 }
 
 extension PVDolphinCore: GameWithCheat {
@@ -179,11 +69,11 @@ extension PVDolphinCore: GameWithCheat {
     ) -> Bool
     {
         do {
-            NSLog("Calling setCheat \(code) \(type) \(codeType)")
-            try self.setCheat(code, setType: type, setCodeType: codeType, setIndex: cheatIndex, setEnabled: enabled)
+            ILOG("Calling setCheat \(code) \(type) \(codeType)")
+            try self._bridge.setCheat(code, setType: type, setCodeType: codeType, setIndex: cheatIndex, setEnabled: enabled)
             return true
         } catch let error {
-            NSLog("Error setCheat \(error)")
+            ELOG("Error setCheat \(error)")
             return false
         }
     }

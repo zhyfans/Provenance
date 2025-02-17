@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -11,8 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = B322A96A29713F9300F0D876 /* Build configuration list for PBXAggregateTarget "mupen64plus-dylib" */;
 			buildPhases = (
-				B322A96B29713F9900F0D876 /* Build */,
-				B322A96C29713FA000F0D876 /* Copy */,
+				B322A96B29713F9900F0D876 /* Build Mupen64 RetroArch */,
 			);
 			dependencies = (
 			);
@@ -22,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B30E98B02C6EEF4000C1431E /* PVSupport in Frameworks */ = {isa = PBXBuildFile; productRef = B30E98AF2C6EEF4000C1431E /* PVSupport */; };
+		B30E99E32C6F04AC00C1431E /* PVCoreBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B30E99E22C6F04AC00C1431E /* PVCoreBridge */; };
 		B32296E828783C1200585AD8 /* callbacks.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C8A59D2877D0BA0037A946 /* callbacks.c */; };
 		B32296EA28783C2300585AD8 /* debugger.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C8A5962877D0BA0037A946 /* debugger.c */; };
 		B32296EB28783C2300585AD8 /* frontend.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C8A58F2877D0BA0037A946 /* frontend.c */; };
@@ -318,15 +319,16 @@
 		B32299352878ACBD00585AD8 /* vidext_libretro.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C8A4FC2877D0BA0037A946 /* vidext_libretro.c */; };
 		B324C62B21920BC2009F4EDC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B3303E811DED272E00896D96 /* libz.tbd */; };
 		B324C63121920BDB009F4EDC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3EA447B206E10C700E608F6 /* OpenGLES.framework */; platformFilters = (ios, tvos, ); };
-		B3274E8B2106C19600857F52 /* PVSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3055BEE20730B60001212D2 /* PVSupport.framework */; };
 		B33809312877C5530009C732 /* Core.plist in Resources */ = {isa = PBXBuildFile; fileRef = B338091F2877C5530009C732 /* Core.plist */; };
 		B33809332877C5530009C732 /* PVMupen64Plus-NX.h in Headers */ = {isa = PBXBuildFile; fileRef = B33809202877C5530009C732 /* PVMupen64Plus-NX.h */; };
 		B33809372877C5530009C732 /* PVMupen64Plus-NXCore.h in Headers */ = {isa = PBXBuildFile; fileRef = B33809232877C5530009C732 /* PVMupen64Plus-NXCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3962AED26FBD8A500FAEFC0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3962AEB26FBD89A00FAEFC0 /* OpenGL.framework */; platformFilter = maccatalyst; };
-		B39E129A28925CB000016387 /* PVLibRetro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39E129928925CB000016387 /* PVLibRetro.framework */; };
 		B3AE1DD420731F2700AD06D4 /* libdl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B3AE1DD320731F2700AD06D4 /* libdl.tbd */; };
 		B3C8A65A2877D1A80037A946 /* libretro.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C8A0492877D0B80037A946 /* libretro.c */; };
 		B3C8A65D2877D2A30037A946 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C8A64D2877D0BB0037A946 /* main.c */; };
+		B3F8E11E2CB3DBB400017D1B /* PVEmulatorCore in Frameworks */ = {isa = PBXBuildFile; productRef = B3F8E11D2CB3DBB400017D1B /* PVEmulatorCore */; };
+		B3F8E1212CB3DC6300017D1B /* PVPlists in Frameworks */ = {isa = PBXBuildFile; productRef = B3F8E1202CB3DC6300017D1B /* PVPlists */; };
+		B3F8E1242CB3DC9D00017D1B /* PVCoreObjCBridge in Frameworks */ = {isa = PBXBuildFile; productRef = B3F8E1232CB3DC9D00017D1B /* PVCoreObjCBridge */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -336,13 +338,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = B3303E4B1DED23C600896D96;
 			remoteInfo = "png-iOS";
-		};
-		B322A96D2971403B00F0D876 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B322A96629713F9300F0D876;
-			remoteInfo = "mupen64plus-dylib";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -2648,12 +2643,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3274E8B2106C19600857F52 /* PVSupport.framework in Frameworks */,
-				B39E129A28925CB000016387 /* PVLibRetro.framework in Frameworks */,
 				B324C62B21920BC2009F4EDC /* libz.tbd in Frameworks */,
 				B3AE1DD420731F2700AD06D4 /* libdl.tbd in Frameworks */,
+				B3F8E1212CB3DC6300017D1B /* PVPlists in Frameworks */,
+				B30E99E32C6F04AC00C1431E /* PVCoreBridge in Frameworks */,
+				B3F8E1242CB3DC9D00017D1B /* PVCoreObjCBridge in Frameworks */,
+				B30E98B02C6EEF4000C1431E /* PVSupport in Frameworks */,
 				B3962AED26FBD8A500FAEFC0 /* OpenGL.framework in Frameworks */,
 				B324C63121920BDB009F4EDC /* OpenGLES.framework in Frameworks */,
+				B3F8E11E2CB3DBB400017D1B /* PVEmulatorCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7440,7 +7438,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				B322A96E2971403B00F0D876 /* PBXTargetDependency */,
 			);
 			name = "PVMupen64Plus-NX";
 			productName = "PVMupen64Plus-NXDynamic";
@@ -7474,7 +7471,7 @@
 				BuildIndependentTargetsInParallel = YES;
 				CLASSPREFIX = PV;
 				LastUpgradeCheck = 1300;
-				ORGANIZATIONNAME = "Provenance Emu";
+				ORGANIZATIONNAME = "Provenance EMU";
 				TargetAttributes = {
 					B322A96629713F9300F0D876 = {
 						CreatedOnToolsVersion = 14.2;
@@ -7494,7 +7491,7 @@
 				};
 			};
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "PVMupen64Plus-NX" */;
-			compatibilityVersion = "Xcode 12.0";
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -7502,6 +7499,14 @@
 				Base,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* Mupen64Plus */;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B30E98AE2C6EEF4000C1431E /* XCLocalSwiftPackageReference "../../PVSupport" */,
+				B30E99E12C6F04AC00C1431E /* XCLocalSwiftPackageReference "../../PVCoreBridge" */,
+				B3F8E11C2CB3DBB400017D1B /* XCLocalSwiftPackageReference "../../PVEmulatorCore" */,
+				B3F8E11F2CB3DC6300017D1B /* XCLocalSwiftPackageReference "../../PVPlists" */,
+				B3F8E1222CB3DC9D00017D1B /* XCLocalSwiftPackageReference "../../PVCoreObjCBridge" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -7525,7 +7530,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B322A96B29713F9900F0D876 /* Build */ = {
+		B322A96B29713F9900F0D876 /* Build Mupen64 RetroArch */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -7533,27 +7538,9 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${SRCROOT}/cmake/build/mupen64plus_next_libretro_ios.dylib",
 			);
-			name = Build;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Update Repository\nif [ \"${TARGET_DEVICE_PLATFORM_NAME}\" = \"iphonesimulator\" ] ; then\n        exit 0\nfi\nif [[ \"${CODE_SIGNING_ALLOWED}\" = \"NO\" && ! -f \"${SRCROOT}/../../CodeSigning.xcconfig\" ]]; then\n    exit 0\nfi\n\n# Create Build Environment\nif [ ! -d \"${SRCROOT}/cmake/build\" ]; then\n    mkdir \"${SRCROOT}/cmake/build\"\nfi\nexport LATEST=`git submodule status ${SRCROOT}/mupen64plus-libretro-nx | head -n1 | awk '{print $1;}'`\nexport LOCAL_LATEST=\"v1_000_0001\"\nif [[ ! -f \"${SRCROOT}/cmake/${LATEST}\" || ! -f \"${SRCROOT}/cmake/${LOCAL_LATEST}\" ]]; then\n    rm -fr \"${SRCROOT}/cmake/build/\"*\n    touch \"${SRCROOT}/cmake/${LATEST}\"\n    touch \"${SRCROOT}/cmake/${LOCAL_LATEST}\"\n    cp -pR \"${SRCROOT}/mupen64plus-libretro-nx/\"* \"${SRCROOT}/cmake/build/\"\n    cp \"${SRCROOT}/cmake/Makefile\" \"${SRCROOT}/cmake/build/\"\n    cp \"${SRCROOT}/cmake/libretro.c\" \"${SRCROOT}/cmake/build/libretro/libretro.c\"\n    cd \"${SRCROOT}/cmake/build/\"\n    make clean\nfi\n# Build\ncd \"${SRCROOT}/cmake/build/\"\n#make -j5 platform=ios-arm64\n";
-		};
-		B322A96C29713FA000F0D876 /* Copy */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/mupen64plus-libretro-nx/mupen64plus_next_libretro_ios.dylib",
-			);
-			name = Copy;
+			name = "Build Mupen64 RetroArch";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -7561,7 +7548,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#if [ \"${TARGET_DEVICE_PLATFORM_NAME}\" = \"iphonesimulator\" ] ; then\n        exit 0\n#fi\n#if [[ \"${CODE_SIGNING_ALLOWED}\" = \"NO\" && ! -f \"${SRCROOT}/../../CodeSigning.xcconfig\" ]]; then\n#    exit 0\n#fi\n#cp ${SRCROOT}/cmake/build/mupen64plus_next_libretro_ios.dylib \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "# Update Repository\nif [ \"${TARGET_DEVICE_PLATFORM_NAME}\" = \"iphonesimulator\" ] ; then\n        exit 0\nfi\nif [[ \"${CODE_SIGNING_ALLOWED}\" = \"NO\" && ! -f \"${SRCROOT}/../../CodeSigning.xcconfig\" ]]; then\n    exit 0\nfi\n\n# Create Build Environment\nif [ ! -d \"${SRCROOT}/cmake/build\" ]; then\n    mkdir \"${SRCROOT}/cmake/build\"\nfi\nexport LATEST=`git submodule status ${SRCROOT}/mupen64plus-libretro-nx | head -n1 | awk '{print $1;}'`\nexport LOCAL_LATEST=\"v1_000_0001\"\nif [[ ! -f \"${SRCROOT}/cmake/${LATEST}\" || ! -f \"${SRCROOT}/cmake/${LOCAL_LATEST}\" ]]; then\n    rm -fr \"${SRCROOT}/cmake/build/\"*\n    touch \"${SRCROOT}/cmake/${LATEST}\"\n    touch \"${SRCROOT}/cmake/${LOCAL_LATEST}\"\n    cp -pR \"${SRCROOT}/mupen64plus-libretro-nx/\"* \"${SRCROOT}/cmake/build/\"\n    cp \"${SRCROOT}/cmake/Makefile\" \"${SRCROOT}/cmake/build/\"\n    cp \"${SRCROOT}/cmake/libretro.c\" \"${SRCROOT}/cmake/build/libretro/libretro.c\"\n    cd \"${SRCROOT}/cmake/build/\"\n    make clean\nfi\n# Build\ncd \"${SRCROOT}/cmake/build/\"\nmake -j5 platform=ios-arm64\n\ncp \"${SRCROOT}/cmake/build/mupen64plus_next_libretro_ios.dylib\" \"${SRCROOT}/../../CoresRetro/RetroArch/modules/mupen64plus_next_libretro_ios.dylib\"\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -7891,16 +7878,6 @@
 			target = B3303E4B1DED23C600896D96 /* mupen64plus-nx-retro */;
 			targetProxy = B31737FF2783F925002D3ACD /* PBXContainerItemProxy */;
 		};
-		B322A96E2971403B00F0D876 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			platformFilters = (
-				ios,
-				maccatalyst,
-				macos,
-			);
-			target = B322A96629713F9300F0D876 /* mupen64plus-dylib */;
-			targetProxy = B322A96D2971403B00F0D876 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -7981,7 +7958,7 @@
 					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom/android/include\"",
 					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom/GLideN64\"",
 					"\"$(SRCROOT)/mupen64plus-libretro-nx/libretro-common/crt/include\"",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(TOOLCHAIN_DIR)/usr/include\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -7989,6 +7966,7 @@
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvsimulator appletvos";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/cmake";
 				TARGETED_DEVICE_FAMILY = "1,2,3,6";
 				TVOS_DEPLOYMENT_TARGET = 13.0;
 				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGLES;
@@ -8058,7 +8036,7 @@
 					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom/android/include\"",
 					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom/GLideN64\"",
 					"\"$(SRCROOT)/mupen64plus-libretro-nx/libretro-common/crt/include\"",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(TOOLCHAIN_DIR)/usr/include\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				ONLY_ACTIVE_ARCH = YES;
@@ -8067,6 +8045,7 @@
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/cmake";
 				TARGETED_DEVICE_FAMILY = "1,2,3,6";
 				TVOS_DEPLOYMENT_TARGET = 13.0;
 				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGLES;
@@ -8095,221 +8074,6 @@
 			};
 			name = Release;
 		};
-		B322A96929713F9300F0D876 /* Archive */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				LD_MAP_FILE_PATH = "";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Archive;
-		};
-		B324C51D2191A3FE009F4EDC /* Archive */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3962AEA26FBD16000FAEFC0 /* Config.xcconfig */;
-			buildSettings = {
-				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				DEAD_CODE_STRIPPING = NO;
-				ENABLE_BITCODE = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = c11;
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/libretro-common/include\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/mupen64plus-core/src\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/mupen64plus-core/subprojects\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/mupen64plus-core/subprojects/md5\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/mupen64plus-core/subprojects/minizip\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/mupen64plus-core/subprojects/oglft\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/mupen64plus-core/subprojects/oglft\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/libretro\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom/GLideN64\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom/mupen64plus-core\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom/dependencies/libzlib\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom/dependencies/libpng\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/mupen64plus-rsp-paraLLEl/lightning/include\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/mupen64plus-rsp-paraLLEl/arch/simd/rsp\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/GLideN64/src/inc\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/GLideN64/src/osal\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom/mupen64plus-core\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom/mupen64plus-core/plugin/audio_libretro\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom/android/include\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/custom/GLideN64\"",
-					"\"$(SRCROOT)/mupen64plus-libretro-nx/libretro-common/crt/include\"",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				ONLY_ACTIVE_ARCH = NO;
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvsimulator appletvos";
-				SUPPORTS_MACCATALYST = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3,6";
-				TVOS_DEPLOYMENT_TARGET = 13.0;
-				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGLES;
-			};
-			name = Archive;
-		};
-		B324C51E2191A3FE009F4EDC /* Archive */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = NO;
-				GCC_PREFIX_HEADER = "PVMupen64Plus-NX-Prefix.pch";
-				GCC_UNROLL_LOOPS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "PVMupen64Plus-NX/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-				);
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.provenance-emu.PVMupen64Plus-NX";
-				PRODUCT_NAME = "PVMupen64Plus-NX";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_VERSION = 5.0;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Archive;
-		};
-		B324C5282191A3FE009F4EDC /* Archive */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_CPLUSPLUSFLAGS = (
-					"$(OTHER_CFLAGS)",
-					"-fvisibility-inlines-hidden",
-					"-DPNG_ARM_NEON_OPT=0",
-				);
-				PRODUCT_NAME = "mupen64plus-nx-retro";
-				SKIP_INSTALL = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Archive;
-		};
-		B324C5292191A3FE009F4EDC /* Archive */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					TXFILTER_LIB,
-					OS_IOS,
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "mupen64plus-nx";
-				SKIP_INSTALL = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Archive;
-		};
 		B3303E531DED23C700896D96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -8330,7 +8094,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -8340,6 +8104,10 @@
 				PRODUCT_NAME = "mupen64plus-nx-retro";
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,6";
+				TVOS_DEPLOYMENT_TARGET = 15.6;
 			};
 			name = Debug;
 		};
@@ -8360,6 +8128,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -8369,6 +8138,10 @@
 				PRODUCT_NAME = "mupen64plus-nx-retro";
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,6";
+				TVOS_DEPLOYMENT_TARGET = 15.6;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -8386,8 +8159,8 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -8413,8 +8186,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "PVMupen64Plus-NX/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -8429,8 +8201,12 @@
 				PRODUCT_NAME = "PVMupen64Plus-NX";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,6";
+				TVOS_DEPLOYMENT_TARGET = 15.6;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -8448,8 +8224,8 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -8472,8 +8248,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "PVMupen64Plus-NX/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -8488,7 +8263,11 @@
 				PRODUCT_NAME = "PVMupen64Plus-NX";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3,6";
+				TVOS_DEPLOYMENT_TARGET = 15.6;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -8520,12 +8299,16 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "mupen64plus-nx";
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,6";
+				TVOS_DEPLOYMENT_TARGET = 15.6;
 			};
 			name = Debug;
 		};
@@ -8554,11 +8337,16 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "mupen64plus-nx";
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2,3,6";
+				TVOS_DEPLOYMENT_TARGET = 15.6;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -8571,7 +8359,6 @@
 			buildConfigurations = (
 				1DEB913F08733D840010E9CD /* Debug */,
 				1DEB914008733D840010E9CD /* Release */,
-				B324C51D2191A3FE009F4EDC /* Archive */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -8581,7 +8368,6 @@
 			buildConfigurations = (
 				B322A96729713F9300F0D876 /* Debug */,
 				B322A96829713F9300F0D876 /* Release */,
-				B322A96929713F9300F0D876 /* Archive */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -8591,7 +8377,6 @@
 			buildConfigurations = (
 				B3303E531DED23C700896D96 /* Debug */,
 				B3303E541DED23C700896D96 /* Release */,
-				B324C5282191A3FE009F4EDC /* Archive */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -8601,7 +8386,6 @@
 			buildConfigurations = (
 				B37EFF3E1C72F43400857158 /* Debug */,
 				B37EFF3F1C72F43400857158 /* Release */,
-				B324C51E2191A3FE009F4EDC /* Archive */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -8611,12 +8395,57 @@
 			buildConfigurations = (
 				B3800FFB208522DD00FA03B8 /* Debug */,
 				B3800FFC208522DD00FA03B8 /* Release */,
-				B324C5292191A3FE009F4EDC /* Archive */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		B30E98AE2C6EEF4000C1431E /* XCLocalSwiftPackageReference "../../PVSupport" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../PVSupport;
+		};
+		B30E99E12C6F04AC00C1431E /* XCLocalSwiftPackageReference "../../PVCoreBridge" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../PVCoreBridge;
+		};
+		B3F8E11C2CB3DBB400017D1B /* XCLocalSwiftPackageReference "../../PVEmulatorCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../PVEmulatorCore;
+		};
+		B3F8E11F2CB3DC6300017D1B /* XCLocalSwiftPackageReference "../../PVPlists" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../PVPlists;
+		};
+		B3F8E1222CB3DC9D00017D1B /* XCLocalSwiftPackageReference "../../PVCoreObjCBridge" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../PVCoreObjCBridge;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B30E98AF2C6EEF4000C1431E /* PVSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PVSupport;
+		};
+		B30E99E22C6F04AC00C1431E /* PVCoreBridge */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PVCoreBridge;
+		};
+		B3F8E11D2CB3DBB400017D1B /* PVEmulatorCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PVEmulatorCore;
+		};
+		B3F8E1202CB3DC6300017D1B /* PVPlists */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PVPlists;
+		};
+		B3F8E1232CB3DC9D00017D1B /* PVCoreObjCBridge */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PVCoreObjCBridge;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
 }

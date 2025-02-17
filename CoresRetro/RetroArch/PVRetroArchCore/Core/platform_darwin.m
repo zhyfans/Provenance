@@ -285,13 +285,21 @@ static void frontend_darwin_get_os(char *s, size_t len, int *major, int *minor)
 {
 #if defined(IOS)
    get_ios_version(major, minor);
+#if TARGET_OS_TV
+   s[0] = 't';
+   s[1] = 'v';
+   s[2] = 'O';
+   s[3] = 'S';
+   s[4] = '\0';
+#else
    s[0] = 'i';
    s[1] = 'O';
    s[2] = 'S';
    s[3] = '\0';
+#endif
 #elif defined(OSX)
 
-#if MAC_OS_X_VERSION_MIN_REQUIRED >= 101300 // MAC_OS_X_VERSION_10_13
+#if MAC_OS_X_VERSION_MIN_REQUIRED >= 101300 /* MAC_OS_X_VERSION_10_13 */
    NSOperatingSystemVersion version = NSProcessInfo.processInfo.operatingSystemVersion;
    *major = (int)version.majorVersion;
    *minor = (int)version.minorVersion;
@@ -398,8 +406,10 @@ void frontend_darwin_get_env(int *argc, char *argv[],
    fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_REMAP], g_defaults.dirs[DEFAULT_DIR_MENU_CONFIG], "remaps", sizeof(g_defaults.dirs[DEFAULT_DIR_REMAP]));
 #if defined(HAVE_UPDATE_CORES) || defined(HAVE_STEAM)
    fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_CORE], application_data, "cores", sizeof(g_defaults.dirs[DEFAULT_DIR_CORE]));
+#elif defined(OSX)
+   fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_CORE], bundle_path_buf, "Contents/Frameworks", sizeof(g_defaults.dirs[DEFAULT_DIR_CORE]));
 #else
-   fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_CORE], bundle_path_buf, "modules", sizeof(g_defaults.dirs[DEFAULT_DIR_CORE]));
+   fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_CORE], bundle_path_buf, "Frameworks", sizeof(g_defaults.dirs[DEFAULT_DIR_CORE]));
 #endif
    fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_DATABASE], application_data, "database/rdb", sizeof(g_defaults.dirs[DEFAULT_DIR_DATABASE]));
    fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_CORE_ASSETS], application_data, "downloads", sizeof(g_defaults.dirs[DEFAULT_DIR_CORE_ASSETS]));
@@ -420,21 +430,22 @@ void frontend_darwin_get_env(int *argc, char *argv[],
    fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_SHADER], application_data, "shaders", sizeof(g_defaults.dirs[DEFAULT_DIR_SHADER]));
    fill_pathname_join(g_defaults.dirs[DEFAULT_DIR_THUMBNAILS], application_data, "thumbnails", sizeof(g_defaults.dirs[DEFAULT_DIR_THUMBNAILS]));
 
-#if TARGET_OS_IOS
+#if TARGET_OS_IOS || TARGET_OS_TVOS
     {
        int major, minor;
        get_ios_version(&major, &minor);
        if (major > 8)
           strlcpy(g_defaults.path_buildbot_server_url,
-                "http://buildbot.libretro.com/nightly/apple/ios9/latest/",
+                "http://buildbot.libretro.com/nightly/apple/ios-arm64/latest/",
                 sizeof(g_defaults.path_buildbot_server_url));
     }
 #endif
 
-#if TARGET_OS_IOS
+#if TARGET_OS_IOS || TARGET_OS_TV
     fill_pathname_join_special(assets_zip_path, bundle_path_buf, "Frameworks/PVRetroArch.framework/assets.zip", sizeof(assets_zip_path));
     //fill_pathname_join_special(assets_zip_path, bundle_path_buf, "assets.zip", sizeof(assets_zip_path));
 #else
+    /// TODO: For Mac Catalyst or Mac, this path may need to be "Contents/..."
     fill_pathname_join_special(assets_zip_path, full_resource_path_buf, "Frameworks/PVRetroArch.framework/assets.zip", sizeof(assets_zip_path));
     //fill_pathname_join_special(assets_zip_path, full_resource_path_buf, "assets.zip", sizeof(assets_zip_path));
     CFURLRef resource_url;

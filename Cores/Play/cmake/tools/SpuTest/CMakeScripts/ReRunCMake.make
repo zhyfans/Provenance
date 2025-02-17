@@ -9,4 +9,4 @@ TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/jmattiello/Workspace/
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/jmattiello/Workspace/Provenance/Provenance/Cores/Play/Play-/tools/SpuTest/CMakeLists.txt))
 
 /Users/jmattiello/Workspace/Provenance/Provenance/Cores/Play/cmake/CMakeFiles/cmake.check_cache: $(TARGETS)
-	/opt/homebrew/Cellar/cmake/3.25.1/bin/cmake -H/Users/jmattiello/Workspace/Provenance/Provenance/Cores/Play/Play- -B/Users/jmattiello/Workspace/Provenance/Provenance/Cores/Play/cmake
+	/opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -S/Users/jmattiello/Workspace/Provenance/Provenance/Cores/Play/Play- -B/Users/jmattiello/Workspace/Provenance/Provenance/Cores/Play/cmake
